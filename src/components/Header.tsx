@@ -125,7 +125,7 @@ export default function Header() {
                     </Button>
                     <Button
                         variant="primary"
-                        className="hidden sm:inline-flex shadow-md shadow-[var(--primary-200)]"
+                        className="hidden lg:inline-flex shadow-md shadow-[var(--primary-200)]"
                         href="http://dashboard.zimo.vn"
                         target="_blank"
                         rightIcon={<ArrowRight className="h-4 w-4" />}
