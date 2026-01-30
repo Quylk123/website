@@ -4,7 +4,7 @@ import { Facebook, Linkedin, User, Phone, Mail, MapPin, ChevronRight } from "luc
 
 export default function Footer() {
     return (
-        <footer className="bg-[var(--greyscale-900)] text-[var(--greyscale-300)] py-16 text-sm">
+        <footer className="bg-[var(--greyscale-900)] text-[var(--greyscale-100)] py-16 text-sm">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-1 md:col-span-2">
@@ -20,7 +20,7 @@ export default function Footer() {
                                 ZIMO.VN
                             </span>
                         </Link>
-                        <p className="mb-6 text-[var(--greyscale-400)] text-lg leading-relaxed pr-8">
+                        <p className="mb-6 text-[var(--greyscale-300)] text-lg leading-relaxed pr-8">
                             Đối tác tin cậy giúp doanh nghiệp SME chuyển đổi số, tối ưu quy trình
                             chăm sóc khách hàng và gia tăng doanh số bền vững trên nền tảng Zalo.
                         </p>
