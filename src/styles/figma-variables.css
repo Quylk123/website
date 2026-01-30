@@ -1,0 +1,217 @@
+:root {
+  /* --- STEP 1: HSL PRIMITIVES --- */
+  /* Supabase Brand Green */
+  --brand-h: 153;
+  --brand-s: 80%;
+  --brand-l: 48%;
+
+  /* Supabase Slate (Greyscale) */
+  --slate-h: 210;
+  --slate-s: 10%;
+
+  /* --- STEP 2: MAPPING TO YOUR VARIABLES --- */
+
+  /* Primary Colors (Green) - Light Mode */
+  --primary-300: hsl(var(--brand-h) var(--brand-s) 45%);
+  --primary-200: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
+  --primary-100: hsl(var(--brand-h) var(--brand-s) 75%);
+  --primary-50: hsl(var(--brand-h) var(--brand-s) 85%);
+  --primary-0: hsl(var(--brand-h) var(--brand-s) 96%);
+
+  /* Greyscale - Light Mode */
+  --greyscale-900: hsl(var(--slate-h) var(--slate-s) 10%);
+  --greyscale-700: hsl(var(--slate-h) var(--slate-s) 30%);
+  --greyscale-500: hsl(var(--slate-h) var(--slate-s) 45%);
+  --greyscale-400: hsl(var(--slate-h) var(--slate-s) 60%);
+  --greyscale-300: hsl(var(--slate-h) var(--slate-s) 80%);
+  --greyscale-100: hsl(var(--slate-h) var(--slate-s) 92%);
+  --greyscale-50: hsl(var(--slate-h) var(--slate-s) 96%);
+  --greyscale-25: hsl(var(--slate-h) var(--slate-s) 98%);
+  --greyscale-0: #ffffff;
+
+  /* Base Colors - Light Mode */
+  --base-primary: var(--primary-200);
+  --base-background: var(--greyscale-0);
+  --base-text-paragraph: var(--greyscale-500);
+
+  /* Status Colors */
+  --base-error: hsl(354 84% 57%);
+  --status-success: var(--primary-200);
+  --status-warning: hsl(35 92% 51%);
+  --status-info: hsl(201 94% 45%);
+
+  /* Button Tokens */
+  --btn-primary-bg: #3ECF8E;
+  --btn-primary-text: #00331F;
+  --btn-primary-border: #10B981;
+  --btn-primary-hover-bg: #34D399;
+
+  --additional-white: #ffffff;
+
+  /* --- SEMANTIC PALETTE (Status & Badges) --- */
+  /* ... (Rest of palette omitted for brevity but implied same structure) ... */
+   /* Blue (Info, Processing, Occupied) */
+  --palette-blue-bg: #dbeafe;
+  --palette-blue-badge-bg: #dbeafe;
+  --palette-blue-text: #1d4ed8;
+  --palette-blue-border: #bfdbfe;
+
+  /* Green (Success, Paid, Free Long) */
+  --palette-green-bg: #dcfce7;
+  --palette-green-badge-bg: #dcfce7;
+  --palette-green-text: #15803d;
+  --palette-green-border: #86efac;
+
+  /* Red (Error, Cancelled, Overstay) */
+  --palette-red-bg: #fee2e2;
+  --palette-red-badge-bg: #fee2e2;
+  --palette-red-text: #b91c1c;
+  --palette-red-border: #fca5a5;
+
+  /* Orange (Warning, Pending, Checkout Soon) */
+  --palette-orange-bg: #fff7ed;
+  --palette-orange-badge-bg: #ffedd5;
+  --palette-orange-text: #c2410c;
+  --palette-orange-border: #fdba74;
+
+  /* Yellow (Caution, Free Short) */
+  --palette-yellow-bg: #fef9c3;
+  --palette-yellow-badge-bg: #fef9c3;
+  --palette-yellow-text: #a16207;
+  --palette-yellow-border: #fde047;
+
+  /* Grey (Neutral, Inactive, No Show) */
+  --palette-grey-bg: #f3f4f6;
+  --palette-grey-badge-bg: #f3f4f6;
+  --palette-grey-text: #4b5563;
+  --palette-grey-border: #d1d5db;
+
+  /* Purple */
+  --palette-purple-bg: #f3e8ff;
+  --palette-purple-badge-bg: #f3e8ff;
+  --palette-purple-text: #7e22ce;
+  --palette-purple-border: #d8b4fe;
+
+  /* Teal */
+  --palette-teal-bg: #ccfbf1;
+  --palette-teal-badge-bg: #ccfbf1;
+  --palette-teal-text: #0f766e;
+  --palette-teal-border: #99f6e4;
+
+  /* Pink */
+  --palette-pink-bg: #fce7f3;
+  --palette-pink-badge-bg: #fce7f3;
+  --palette-pink-text: #be185d;
+  --palette-pink-border: #f9a8d4;
+
+  /* Timeline Colors */
+  --timeline-occupied: var(--palette-blue-text);
+  --timeline-confirmed: var(--palette-yellow-text);
+  --timeline-overstay: var(--palette-red-text);
+  --timeline-checked-out: var(--palette-grey-text);
+  --timeline-no-show: var(--palette-grey-border);
+  --timeline-current-indicator: var(--palette-red-text);
+}
+
+/* Dark Mode Colors */
+.dark {
+  --primary-300: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
+  --primary-200: hsl(var(--brand-h) var(--brand-s) 65%);
+  --primary-100: hsl(var(--brand-h) var(--brand-s) 75%);
+  --primary-50: hsl(var(--brand-h) var(--brand-s) 20%);
+  --primary-0: hsl(var(--brand-h) var(--brand-s) 10%);
+
+  --greyscale-900: #f8f9fa;
+  --greyscale-700: #e9ecef;
+  --greyscale-500: #adb5bd;
+  --greyscale-400: #6c757d;
+  --greyscale-300: #495057;
+  --greyscale-100: #2a2a2a;
+  --greyscale-50: #1c1c1c;
+  --greyscale-25: #121212;
+  --greyscale-0: #0d0d0d;
+
+  --base-primary: var(--primary-200);
+  --base-background: var(--greyscale-0);
+  --base-text-paragraph: var(--greyscale-500);
+
+  --base-error: hsl(354 84% 65%);
+  --status-warning: hsl(35 92% 65%);
+
+  --btn-primary-bg: #004529;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-border: rgba(16, 185, 129, 0.3);
+  --btn-primary-hover-bg: #004529;
+
+  --additional-white: #1c1c1c;
+
+  /* --- SEMANTIC PALETTE (Dark Mode) --- */
+  /* Blue */
+  --palette-blue-bg: #1e3a5f;
+  --palette-blue-badge-bg: #1e3a5f;
+  --palette-blue-text: #93c5fd;
+  --palette-blue-border: #1d4ed8;
+
+  /* Green */
+  --palette-green-bg: #064e3b;
+  --palette-green-badge-bg: #064e3b;
+  --palette-green-text: #6ee7b7;
+  --palette-green-border: #047857;
+
+  /* Red */
+  --palette-red-bg: #450a0a;
+  --palette-red-badge-bg: #450a0a;
+  --palette-red-text: #fca5a5;
+  --palette-red-border: #b91c1c;
+
+  /* Orange */
+  --palette-orange-bg: #431407;
+  --palette-orange-badge-bg: #431407;
+  --palette-orange-text: #fdba74;
+  --palette-orange-border: #c2410c;
+
+  /* Yellow */
+  --palette-yellow-bg: #422006;
+  --palette-yellow-badge-bg: #422006;
+  --palette-yellow-text: #fde047;
+  --palette-yellow-border: #a16207;
+
+  /* Grey */
+  --palette-grey-bg: var(--greyscale-100);
+  --palette-grey-badge-bg: var(--greyscale-100);
+  --palette-grey-text: var(--greyscale-500);
+  --palette-grey-border: var(--greyscale-400);
+
+  /* Purple */
+  --palette-purple-bg: #3b0764;
+  --palette-purple-badge-bg: #3b0764;
+  --palette-purple-text: #d8b4fe;
+  --palette-purple-border: #7e22ce;
+
+  /* Teal */
+  --palette-teal-bg: #042f2e;
+  --palette-teal-badge-bg: #042f2e;
+  --palette-teal-text: #5eead4;
+  --palette-teal-border: #0f766e;
+
+  /* Pink */
+  --palette-pink-bg: #500724;
+  --palette-pink-badge-bg: #500724;
+  --palette-pink-text: #f9a8d4;
+  --palette-pink-border: #be185d;
+
+  /* Timeline Colors override for dark */
+  --timeline-occupied: #60a5fa;
+  --timeline-confirmed: #fbbf24;
+  --timeline-overstay: #f87171;
+  --timeline-checked-out: #6b7280;
+  --timeline-no-show: #9ca3af;
+  --timeline-current-indicator: #f87171;
+}
+
+/* Performance & Reset */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
