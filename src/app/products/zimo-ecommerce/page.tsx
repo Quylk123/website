@@ -6,12 +6,12 @@ import Button from "@/components/Button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-    title: "Zimo Ecommerce - Tạo Web Bán Hàng & Zalo Mini App Đồng Bộ",
-    description: "Giải pháp tạo website bán hàng và Zalo Mini App đồng bộ sản phẩm, đơn hàng, tồn kho. Tăng trưởng doanh thu bán lẻ với chi phí tối ưu.",
-    keywords: ["tạo web bán hàng", "zalo mini app bán hàng", "thiết kế web thương mại điện tử", "phần mềm quản lý bán hàng đa kênh", "website bán hàng chuẩn seo"],
+    title: "Zimo Ecommerce - Quản Lý Bán Hàng & Zalo Mini App Đồng Bộ",
+    description: "Giải pháp quản lý bán hàng tập trung và Zalo Mini App đồng bộ sản phẩm, đơn hàng, tồn kho. Tăng trưởng doanh thu bán lẻ với chi phí tối ưu.",
+    keywords: ["quản lý bán hàng", "zalo mini app bán hàng", "phần mềm quản lý bán hàng", "bán hàng đa kênh", "tạo mini app zalo"],
     openGraph: {
-        title: "Zimo Ecommerce - Bán Hàng Đa Kênh Website & Zalo",
-        description: "Sở hữu ngay Website và Mini App bán hàng chuyên nghiệp chỉ trong 5 phút.",
+        title: "Zimo Ecommerce - Quản Lý Bán Hàng & Zalo Mini App",
+        description: "Sở hữu ngay hệ thống quản lý và Mini App bán hàng chuyên nghiệp chỉ trong 5 phút.",
         url: "https://zimo.vn/products/zimo-ecommerce",
         type: "website",
     },
@@ -32,10 +32,10 @@ export default function ZimoEcommercePage() {
                                 <ShoppingBag className="w-4 h-4" /> Giải pháp bán lẻ toàn diện
                             </div>
                             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                                Tạo <span className="text-[var(--base-primary)]">Website Bán Hàng</span> & <span className="text-[#0068FF]">Zalo Mini App</span> Chỉ Trong 5 Phút
+                                Tạo <span className="text-[var(--base-primary)]">Trang Quản Lý</span> & <span className="text-[#0068FF]">Zalo Mini App</span> Chỉ Trong 5 Phút
                             </h1>
                             <p className="text-xl text-[var(--greyscale-500)] mb-8 leading-relaxed">
-                                Đồng bộ sản phẩm, đơn hàng và kho hàng trên mọi nền tảng. Chốt đơn tự động, chăm sóc khách hàng qua ZNS và tăng tỷ lệ quay lại mua hàng.
+                                Hệ thống quản lý tập trung và Mini App đồng bộ. Kiểm soát đơn hàng, tồn kho và chăm sóc khách hàng qua ZNS một cách dễ dàng.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button variant="primary" size="large" href="http://dashboard.zimo.vn/register" target="_blank" rightIcon={<ArrowRight className="w-5 h-5" />}>
@@ -113,15 +113,15 @@ export default function ZimoEcommercePage() {
                         <Card className="border-[var(--greyscale-100)] hover:shadow-xl transition-all duration-300">
                             <CardContent className="p-8">
                                 <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
-                                    <Globe className="w-7 h-7" />
+                                    <BarChart3 className="w-7 h-7" />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4">Website Chuẩn SEO</h3>
+                                <h3 className="text-2xl font-bold mb-4">Quản Lý Toàn Diện</h3>
                                 <p className="text-[var(--greyscale-500)] leading-relaxed mb-4">
-                                    Tự động tối ưu SEO on-page, tốc độ tải trang cực nhanh. Giao diện mobile-first thân thiện, giúp khách hàng mua sắm dễ dàng trên mọi thiết bị.
+                                    Hệ thống dashboard trực quan giúp bạn theo dõi doanh thu, quản lý hàng hóa và đơn hàng từ mọi kênh bán hàng một cách hiệu quả.
                                 </p>
                                 <ul className="space-y-2">
-                                    <li className="flex items-center text-sm text-[var(--greyscale-600)]"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Tên miền riêng miễn phí</li>
-                                    <li className="flex items-center text-sm text-[var(--greyscale-600)]"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> SSL bảo mật an toàn</li>
+                                    <li className="flex items-center text-sm text-[var(--greyscale-600)]"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Báo cáo chi tiết theo thời gian thực</li>
+                                    <li className="flex items-center text-sm text-[var(--greyscale-600)]"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Quản lý nhân viên và phân quyền</li>
                                 </ul>
                             </CardContent>
                         </Card>
@@ -151,10 +151,10 @@ export default function ZimoEcommercePage() {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-4">Quản Lý Tập Trung</h3>
                                 <p className="text-[var(--greyscale-500)] leading-relaxed mb-4">
-                                    Quản lý sản phẩm, tồn kho, đơn hàng từ Website và Mini App trên một màn hình duy nhất. Không còn nỗi lo lệch tồn kho hay sót đơn hàng.
+                                    Quản lý sản phẩm, tồn kho, đơn hàng từ Mini App và các kênh khác trên một màn hình duy nhất. Không còn nỗi lo lệch tồn kho hay sót đơn hàng.
                                 </p>
                                 <ul className="space-y-2">
-                                    <li className="flex items-center text-sm text-[var(--greyscale-600)]"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Báo cáo doanh thu Real-time</li>
+                                    <li className="flex items-center text-sm text-[var(--greyscale-600)]"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Đồng bộ tồn kho tự động</li>
                                     <li className="flex items-center text-sm text-[var(--greyscale-600)]"><CheckCircle2 className="w-4 h-4 text-green-500 mr-2" /> Quản lý thuộc tính sản phẩm</li>
                                 </ul>
                             </CardContent>
@@ -172,7 +172,7 @@ export default function ZimoEcommercePage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-5 justify-center">
                         <Button variant="primary" size="large" href="http://dashboard.zimo.vn/register" target="_blank" className="text-lg px-8">
-                            Tạo Website Miễn Phí
+                            Tạo Mini App Miễn Phí
                         </Button>
                         <Button variant="outline" size="large" href="https://zalo.me/0899111195" target="_blank" className="text-lg px-8 border-white text-white hover:bg-white hover:text-[var(--greyscale-900)]">
                             Tư Vấn: 0899.111.195
