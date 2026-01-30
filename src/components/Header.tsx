@@ -54,8 +54,8 @@ export default function Header() {
     return (
         <header
             className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${isScrolled
-                    ? "border-[var(--greyscale-100)] bg-[var(--base-background)]/90 backdrop-blur-md"
-                    : "border-transparent bg-transparent"
+                ? "border-[var(--greyscale-100)] bg-[var(--base-background)]/90 backdrop-blur-md"
+                : "border-transparent bg-transparent"
                 }`}
         >
             <div className="container mx-auto px-4 h-20 flex justify-between items-center">
@@ -126,7 +126,7 @@ export default function Header() {
                     <Button
                         variant="primary"
                         className="hidden sm:inline-flex shadow-md shadow-[var(--primary-200)]"
-                        href="http://dashboard.zimo.vn/register"
+                        href="http://dashboard.zimo.vn"
                         target="_blank"
                         rightIcon={<ArrowRight className="h-4 w-4" />}
                     >
@@ -189,7 +189,7 @@ export default function Header() {
                             <Button
                                 variant="primary"
                                 className="w-full justify-center"
-                                href="http://dashboard.zimo.vn/register"
+                                href="http://dashboard.zimo.vn"
                                 target="_blank"
                                 rightIcon={<ArrowRight className="h-4 w-4" />}
                             >
