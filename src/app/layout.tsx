@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     type: "website",
   },
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -47,7 +52,11 @@ export default function RootLayout({
           <a href="https://zalo.me/0899111195" target="_blank" className="w-16 h-16 bg-[var(--base-primary)] rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,99,235,0.5)] hover:bg-[var(--primary-300)] hover:scale-110 transition-all duration-300 relative overflow-hidden">
             <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-30 animate-ping"></span>
 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" className="w-9 h-9 filter brightness-0 invert relative z-10" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+              alt="Zalo"
+              className="w-16 h-16 object-contain"
+            />
           </a>
         </div>
       </body>

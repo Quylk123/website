@@ -11,30 +11,31 @@ import { useState } from "react";
 import ImagePreview from "@/components/ImagePreview";
 
 // --- DATA: IMAGES ---
+// --- DATA: IMAGES ---
 const IMAGES = {
     dashboard: {
         dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboardlight.png"
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     bookings: {
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/Bookings-Darkmode.png",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/Bookings-lightmode.png"
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     roomAssignments: {
-        darkTimeline: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/room-assignments-khachvanglai-Darkmode-timeline.png",
-        lightTimeline: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/room-assignments-khachvanglai-Lightmode-timeline.png",
+        darkTimeline: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        lightTimeline: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
     },
     rooms: {
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/RoomsDarkMode.png",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/RoomsLightMode.png"
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     pricing: {
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/pricing-config-darkmode.png",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/pricing-config-lightmode.png"
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     products: {
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/Product-Darkmode.png",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/Product-Lightmode.png"
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     }
 };
 
@@ -42,32 +43,32 @@ const MOBILE_APPS = [
     {
         title: "Trang chủ",
         desc: "Tổng quan & Tìm kiếm",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobiletrangchulightmode.png",
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobiletrangchudarkmode.png"
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     {
         title: "Sản phẩm",
         desc: "Chi tiết & Đặt hàng",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobilechitietphonglightmode.png",
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobilechitietphongdarkmode.png"
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     {
         title: "Giỏ hàng",
         desc: "Thanh toán tiện lợi",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobilechitietdatphonglightmode.png",
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobilechitietdatphongdarkmode.png"
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     {
         title: "Dịch vụ",
         desc: "Hỗ trợ khách hàng",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobiledichvulightmode.png",
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobiledichvudarkmode.png"
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     },
     {
         title: "Cá nhân",
         desc: "Đơn hàng & Tích điểm",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobilecanhanlightmode.png",
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/mobilecanhandarkmode.png"
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png"
     }
 ];
 

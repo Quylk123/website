@@ -9,6 +9,7 @@ import {
 import Button from "@/components/Button";
 import { useState } from "react";
 import ImagePreview from "@/components/ImagePreview";
+import { motion, Variants } from "framer-motion";
 
 // --- DATA: IMAGES ---
 const IMAGES = {
@@ -71,6 +72,33 @@ const MOBILE_APPS = [
     }
 ];
 
+// --- ANIMATION VARIANTS ---
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.2
+        }
+    }
+};
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const fadeInUp: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const zoomIn: Variants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut" } }
+};
+
 // --- COMPONENT: BADGE ---
 const Badge = ({ children, icon: Icon, color = "blue" }: { children: React.ReactNode, icon?: any, color?: "blue" | "green" | "purple" }) => {
     const colorClasses = {
@@ -80,10 +108,15 @@ const Badge = ({ children, icon: Icon, color = "blue" }: { children: React.React
     };
 
     return (
-        <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border ${colorClasses[color]} text-xs font-bold uppercase tracking-wider shadow-sm`}>
+        <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border ${colorClasses[color]} text-xs font-bold uppercase tracking-wider shadow-sm`}
+        >
             {Icon && <Icon className="w-3.5 h-3.5" />}
             {children}
-        </div>
+        </motion.div>
     );
 };
 
@@ -97,7 +130,10 @@ const BentoCard = ({ title, description, imageDark, imageLight, icon: Icon, icon
     };
 
     return (
-        <div className={`group relative overflow-hidden rounded-3xl border border-[var(--greyscale-200)] bg-[var(--greyscale-0)] shadow-lg hover:shadow-xl transition-all duration-300 ${className}`}>
+        <motion.div
+            variants={itemVariants}
+            className={`group relative overflow-hidden rounded-3xl border border-[var(--greyscale-200)] bg-[var(--greyscale-0)] shadow-lg hover:shadow-xl transition-all duration-300 ${className}`}
+        >
             <div className="p-8 pb-0 flex flex-col h-full">
                 <div className={`mb-4 w-12 h-12 rounded-2xl flex items-center justify-center ${iconBgClasses[iconColor] || iconBgClasses.blue} group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-6 h-6" />
@@ -116,12 +152,11 @@ const BentoCard = ({ title, description, imageDark, imageLight, icon: Icon, icon
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
 // --- COMPONENT: PHONE MOCKUP ---
-// Frame điện thoại CSS thuần để hiển thị ảnh dọc
 const PhoneMockup = ({ lightSrc, darkSrc, title, desc, onPreview }: any) => {
     return (
         <div
@@ -133,7 +168,7 @@ const PhoneMockup = ({ lightSrc, darkSrc, title, desc, onPreview }: any) => {
                 {/* Phone border */}
                 <div className="absolute inset-0 rounded-[1.7rem] border-[4px] border-[var(--greyscale-800)] pointer-events-none" />
 
-                {/* PHONE BODY — đổi sang flex centering cho parent */}
+                {/* PHONE BODY */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative w-[420px] h-[920px] rounded-[1.5rem] bg-[var(--greyscale-900)] overflow-hidden shadow-2xl">
 
@@ -191,19 +226,34 @@ export default function ClientPage() {
                 <div className="container mx-auto px-4 text-center max-w-6xl relative z-10">
                     <Badge icon={Zap} color="blue">Phiên bản mới 2.0</Badge>
 
-                    <h1 className="mt-8 text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-[var(--greyscale-900)] leading-[1.1]">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                        className="mt-8 text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-[var(--greyscale-900)] leading-[1.1]"
+                    >
                         Quản lý khách sạn <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--base-primary)] to-[var(--palette-teal-text)]">
                             Chưa bao giờ dễ thế
                         </span>
-                    </h1>
+                    </motion.h1>
 
-                    <p className="mt-6 text-lg sm:text-xl md:text-2xl text-[var(--greyscale-500)] max-w-3xl mx-auto leading-relaxed">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                        className="mt-6 text-lg sm:text-xl md:text-2xl text-[var(--greyscale-500)] max-w-3xl mx-auto leading-relaxed"
+                    >
                         Tất cả trong một: Booking, Housekeeping, Minibar & Báo cáo.
                         Giao diện chuẩn UX/UI giúp nhân viên thành thạo chỉ sau 15 phút.
-                    </p>
+                    </motion.p>
 
-                    <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.3 }}
+                        className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
+                    >
                         <Button
                             variant="primary"
                             size="large"
@@ -223,10 +273,16 @@ export default function ClientPage() {
                         >
                             Xem Demo
                         </Button>
-                    </div>
+                    </motion.div>
                 </div>
 
-                <div className="mt-20 relative mx-auto w-full max-w-5xl group cursor-zoom-in" >
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={zoomIn}
+                    className="mt-20 relative mx-auto w-full max-w-5xl group cursor-zoom-in"
+                >
                     <div className="absolute -inset-1 bg-gradient-to-r from-[var(--base-primary)] to-[var(--palette-teal-text)] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[var(--greyscale-200)] bg-[var(--greyscale-0)]">
                         <div className="h-8 bg-[var(--greyscale-50)] border-b border-[var(--greyscale-200)] flex items-center px-4 gap-2">
@@ -241,22 +297,34 @@ export default function ClientPage() {
                             <Image src={IMAGES.dashboard.dark} alt="Dashboard" width={1400} height={900} priority className="w-full h-auto" />
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </section>
 
             {/* --- SECTION: BENTO GRID FEATURES --- */}
             <section className="py-24 bg-[var(--greyscale-50)]">
                 <div className="container mx-auto px-4 max-w-7xl">
-                    <div className="text-center mb-16 max-w-3xl mx-auto">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="text-center mb-16 max-w-3xl mx-auto"
+                    >
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--greyscale-900)] tracking-tight">
                             Mọi tính năng bạn cần. <br />
                             <span className="text-[var(--greyscale-400)]">Không có sự phức tạp.</span>
                         </h2>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[500px]">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={containerVariants}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[500px]"
+                    >
                         {/* 1. ROOM ASSIGNMENT */}
-                        <div className="md:col-span-2 group relative overflow-hidden rounded-3xl border border-[var(--greyscale-200)] bg-[var(--greyscale-0)] shadow-lg hover:shadow-xl transition-all">
+                        <motion.div variants={itemVariants} className="md:col-span-2 group relative overflow-hidden rounded-3xl border border-[var(--greyscale-200)] bg-[var(--greyscale-0)] shadow-lg hover:shadow-xl transition-all">
                             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--palette-blue-bg)]/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <div className="p-10 h-full flex flex-col">
                                 <div className="flex items-center gap-4 mb-4">
@@ -275,7 +343,7 @@ export default function ClientPage() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* 2. BOOKINGS */}
                         <BentoCard
@@ -302,7 +370,7 @@ export default function ClientPage() {
                         />
 
                         {/* 4. PRODUCTS & ROOMS */}
-                        <div className="md:col-span-2 flex flex-col md:flex-row gap-6">
+                        <motion.div variants={itemVariants} className="md:col-span-2 flex flex-col md:flex-row gap-6">
                             <div className="flex-1 rounded-3xl border border-[var(--greyscale-200)] bg-[var(--greyscale-0)] p-8 shadow-sm hover:shadow-md transition-shadow">
                                 <div className="mb-4"><ShoppingBag className="w-10 h-10 text-[var(--palette-orange-text)]" /></div>
                                 <h3 className="text-xl font-bold mb-2 text-[var(--greyscale-900)]">Bán hàng & Minibar</h3>
@@ -322,15 +390,21 @@ export default function ClientPage() {
                                     <div className="hidden dark:block h-full relative" onClick={() => openPreview(IMAGES.rooms.dark)}><Image src={IMAGES.rooms.dark} alt="Rooms" fill className="object-cover" /></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* --- SECTION: MINI APP MOBILE --- */}
             <section className="py-24 bg-[var(--base-background)] relative overflow-hidden border-t border-[var(--greyscale-100)]">
                 <div className="container mx-auto px-4 max-w-7xl">
-                    <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8"
+                    >
                         <div className="max-w-2xl">
                             <div className="inline-flex items-center gap-2 mb-4">
                                 <Badge icon={Smartphone} color="purple">Zalo Mini App</Badge>
@@ -354,12 +428,18 @@ export default function ClientPage() {
                                 Quét mã trải nghiệm
                             </Button>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Horizontal Scroll for Mobile Screens */}
-                    <div className="flex gap-8 overflow-x-auto pb-12 pt-4 px-4 -mx-4 snap-x snap-mandatory scrollbar-hide justify-start lg:justify-center">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={containerVariants}
+                        className="flex gap-8 overflow-x-auto pb-12 pt-4 px-4 -mx-4 snap-x snap-mandatory scrollbar-hide justify-start lg:justify-center"
+                    >
                         {MOBILE_APPS.map((app, index) => (
-                            <div key={index} className="snap-center shrink-0">
+                            <motion.div key={index} variants={itemVariants} className="snap-center shrink-0">
                                 <PhoneMockup
                                     lightSrc={app.light}
                                     darkSrc={app.dark}
@@ -367,15 +447,21 @@ export default function ClientPage() {
                                     desc={app.desc}
                                     onPreview={() => handleMobilePreview(app.light, app.dark)}
                                 />
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* --- SECTION: DARK/LIGHT MODE --- */}
             <section className="py-24 bg-[var(--greyscale-100)] relative overflow-hidden">
-                <div className="container mx-auto px-4 text-center relative z-10">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                    className="container mx-auto px-4 text-center relative z-10"
+                >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--greyscale-0)] border border-[var(--greyscale-200)] text-[var(--greyscale-900)] text-sm font-medium mb-8">
                         <Moon className="w-4 h-4" /> Vận hành xuyên đêm 24/7
                     </div>
@@ -386,7 +472,11 @@ export default function ClientPage() {
                     <p className="text-xl text-[var(--greyscale-500)] mb-12 max-w-2xl mx-auto">
                         Chúng tôi thiết kế riêng chế độ tối để bảo vệ mắt lễ tân khi làm việc ca đêm.
                     </p>
-                    <div className="relative max-w-5xl mx-auto cursor-zoom-in" onClick={() => openPreview(IMAGES.dashboard.dark)}>
+                    <motion.div
+                        variants={zoomIn}
+                        className="relative max-w-5xl mx-auto cursor-zoom-in"
+                        onClick={() => openPreview(IMAGES.dashboard.dark)}
+                    >
                         <div className="absolute -left-12 top-1/2 -translate-y-1/2 p-4 bg-[var(--greyscale-0)]/80 backdrop-blur-md rounded-2xl border border-[var(--greyscale-200)] shadow-xl hidden lg:block animate-bounce duration-[3000ms]">
                             <Sun className="w-8 h-8 text-[var(--palette-yellow-text)]" />
                         </div>
@@ -396,13 +486,19 @@ export default function ClientPage() {
                         <div className="rounded-2xl overflow-hidden shadow-2xl shadow-[var(--base-primary)]/10 border border-[var(--greyscale-200)]">
                             <Image src={IMAGES.dashboard.dark} alt="Dark Mode UI" width={1200} height={800} className="w-full h-auto" />
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </section>
 
             {/* --- CTA SECTION --- */}
             <section className="py-32 bg-[var(--greyscale-0)] relative border-t border-[var(--greyscale-100)]">
-                <div className="container mx-auto px-4 text-center">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                    className="container mx-auto px-4 text-center"
+                >
                     <h2 className="text-4xl md:text-5xl font-bold mb-8 text-[var(--greyscale-900)]">
                         Sẵn sàng bùng nổ doanh thu?
                     </h2>
@@ -421,7 +517,7 @@ export default function ClientPage() {
                     <p className="mt-6 text-[var(--greyscale-500)] text-sm">
                         Không cần thẻ tín dụng. Miễn phí trọn đời gói Starter.
                     </p>
-                </div>
+                </motion.div>
             </section>
 
             {/* LIGHTBOX PREVIEW */}
