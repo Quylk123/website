@@ -112,7 +112,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div >
 
                 <div className="border-t border-[var(--greyscale-200)] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-[var(--greyscale-500)]">
                     <p>&copy; 2026 Zimo.vn. Bảo lưu mọi quyền.</p>
@@ -123,7 +123,7 @@ export default function Footer() {
                         </span>
                     </p>
                 </div>
-            </div>
-        </footer>
+            </div >
+        </footer >
     );
 }

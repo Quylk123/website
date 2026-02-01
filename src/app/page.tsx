@@ -196,7 +196,7 @@ export default function Home() {
                 <li className="flex items-center"><CheckCircle2 className="text-[var(--base-primary)] mr-3 h-5 w-5" /> Giao diện cơ bản</li>
                 <li className="flex items-center"><CheckCircle2 className="text-[var(--base-primary)] mr-3 h-5 w-5" /> Thông tin doanh nghiệp</li>
                 <li className="flex items-center"><CheckCircle2 className="text-[var(--base-primary)] mr-3 h-5 w-5" /> Tích hợp Zalo OA</li>
-                <li className="flex items-center text-[var(--greyscale-300)]"><XCircle className="mr-3 h-5 w-5" /> Tích điểm Loyalty</li>
+                <li className="flex items-center text-[var(--greyscale-400)]"><XCircle className="mr-3 h-5 w-5" /> Tích điểm Loyalty</li>
               </ul>
               <Button variant="outline" className="w-full border-[var(--base-primary)] text-[var(--base-primary)]" href="https://zalo.me/0899111195" target="_blank">Chọn gói này</Button>
             </div>
