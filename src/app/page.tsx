@@ -142,63 +142,83 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto"
           >
-            {/* Card 1: Auto Care */}
+            {/* Card 1: Zimo Hotel */}
             <motion.div variants={fadeInUp}>
-              <Card className="hover:-translate-y-2 hover:shadow-lg transition-all duration-300 border-[var(--greyscale-100)] h-full">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-[var(--palette-blue-bg)] rounded-2xl flex items-center justify-center text-[var(--palette-blue-text)] mb-6">
-                    <Car className="h-8 w-8" />
+              <Card className="hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border-[var(--greyscale-100)] h-full overflow-hidden group">
+                <div className="h-2 w-full bg-[var(--palette-blue-bg)]"></div>
+                <CardHeader className="pb-4">
+                  <div className="w-20 h-20 bg-[var(--palette-blue-bg)] rounded-3xl flex items-center justify-center text-[var(--palette-blue-text)] mb-6 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-10 h-10"
+                    >
+                      <path d="M10 22v-6.57" />
+                      <path d="M12 11h.01" />
+                      <path d="M12 7h.01" />
+                      <path d="M14 15.43V22" />
+                      <path d="M15 16a5 5 0 0 0-6 0" />
+                      <path d="M16 11h.01" />
+                      <path d="M16 7h.01" />
+                      <path d="M18 11h.01" />
+                      <path d="M18 7h.01" />
+                      <path d="M22 11h.01" />
+                      <path d="M22 7h.01" />
+                      <path d="M3 7h.01" />
+                      <path d="M3 11h.01" />
+                      <rect x="2" y="2" width="20" height="20" rx="2" />
+                      <path d="M6 7h.01" />
+                      <path d="M6 11h.01" />
+                      <path d="M8 11h.01" />
+                      <path d="M8 7h.01" />
+                    </svg>
                   </div>
-                  <CardTitle className="text-2xl font-bold group-hover:text-[var(--base-primary)]">Zimo Auto Care</CardTitle>
+                  <CardTitle className="text-3xl font-bold group-hover:text-[var(--base-primary)] transition-colors">Zimo Hotel</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base mb-6 leading-relaxed">
-                    Giải pháp cho Showroom, Garage. Tự động nhắc lịch bảo dưỡng qua ZNS, sổ bảo hành điện tử, đặt lịch dịch vụ không cần gọi điện.
+                  <CardDescription className="text-lg mb-8 leading-relaxed text-[var(--greyscale-500)]">
+                    Giải pháp quản lý Khách sạn & Homestay 4.0 toàn diện.
+                    <ul className="mt-4 space-y-2 text-base">
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[var(--base-primary)]" /> Sơ đồ phòng trực quan (Room Plan)</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[var(--base-primary)]" /> Quản lý đặt phòng & Check-in/out</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[var(--base-primary)]" /> Tích hợp khóa từ & Minibar</li>
+                    </ul>
                   </CardDescription>
-                  <Link href="/products/zimo-ecommerce" className="inline-flex items-center gap-2 text-[var(--base-primary)] font-semibold hover:gap-4 transition-all">
-                    Yêu cầu demo <ArrowRight className="h-4 w-4" />
+                  <Link href="/products/zimo-hotel" className="w-full inline-flex justify-center items-center gap-2 bg-[var(--primary-50)] text-[var(--base-primary)] py-3 rounded-xl font-bold hover:bg-[var(--base-primary)] hover:text-white transition-all shadow-sm hover:shadow-md">
+                    Xem chi tiết <ArrowRight className="h-5 w-5" />
                   </Link>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Card 2: B2B Pro */}
+            {/* Card 2: Zimo Ecommerce */}
             <motion.div variants={fadeInUp}>
-              <Card className="hover:-translate-y-2 hover:shadow-lg transition-all duration-300 border-[var(--greyscale-100)] h-full">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-[var(--palette-green-bg)] rounded-2xl flex items-center justify-center text-[var(--palette-green-text)] mb-6">
-                    <Package className="h-8 w-8" />
+              <Card className="hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border-[var(--greyscale-100)] h-full overflow-hidden group">
+                <div className="h-2 w-full bg-[var(--palette-green-bg)]"></div>
+                <CardHeader className="pb-4">
+                  <div className="w-20 h-20 bg-[var(--palette-green-bg)] rounded-3xl flex items-center justify-center text-[var(--palette-green-text)] mb-6 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                    <Package className="h-10 w-10" />
                   </div>
-                  <CardTitle className="text-2xl font-bold">Zimo B2B Pro</CardTitle>
+                  <CardTitle className="text-3xl font-bold group-hover:text-[var(--palette-green-text)] transition-colors">Zimo Ecommerce</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base mb-6 leading-relaxed">
-                    Cho Nhà phân phối, Xưởng sản xuất. Đại lý tự đặt hàng, tra cứu tồn kho realtime, xem công nợ và chính sách chiết khấu cá nhân hóa.
+                  <CardDescription className="text-lg mb-8 leading-relaxed text-[var(--greyscale-500)]">
+                    Hệ thống bán hàng đa kênh & Zalo Mini App.
+                    <ul className="mt-4 space-y-2 text-base">
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[var(--palette-green-text)]" /> Đồng bộ đơn hàng & tồn kho</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[var(--palette-green-text)]" /> Tích hợp vận chuyển & thanh toán</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[var(--palette-green-text)]" /> CRM & ZNS chăm sóc khách hàng</li>
+                    </ul>
                   </CardDescription>
-                  <Link href="/products/zimo-ecommerce" className="inline-flex items-center gap-2 text-[var(--palette-green-text)] font-semibold hover:gap-4 transition-all">
-                    Yêu cầu demo <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Card 3: Event & Game */}
-            <motion.div variants={fadeInUp}>
-              <Card className="hover:-translate-y-2 hover:shadow-lg transition-all duration-300 border-[var(--greyscale-100)] h-full">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-[var(--palette-orange-bg)] rounded-2xl flex items-center justify-center text-[var(--palette-orange-text)] mb-6">
-                    <Gift className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Zimo Event & Game</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base mb-6 leading-relaxed">
-                    Vòng quay may mắn, Lì xì, Minigame thu thập data khách hàng tiềm năng (Leads) hiệu quả cho các chiến dịch Marketing, Lễ Tết.
-                  </CardDescription>
-                  <Link href="/features/mini-game" className="inline-flex items-center gap-2 text-[var(--palette-orange-text)] font-semibold hover:gap-4 transition-all">
-                    Yêu cầu demo <ArrowRight className="h-4 w-4" />
+                  <Link href="/products/zimo-ecommerce" className="w-full inline-flex justify-center items-center gap-2 bg-[var(--green-50)] text-[var(--palette-green-text)] py-3 rounded-xl font-bold hover:bg-[var(--palette-green-text)] hover:text-white transition-all shadow-sm hover:shadow-md">
+                    Xem chi tiết <ArrowRight className="h-5 w-5" />
                   </Link>
                 </CardContent>
               </Card>
