@@ -127,20 +127,20 @@ export default function Home() {
       </section>
 
       {/* Features Split Section (#tinh-nang) */}
-      <section id="tinh-nang" className="py-24 bg-[var(--greyscale-900)] text-[var(--greyscale-0)] relative overflow-hidden">
+      <section id="tinh-nang" className="py-24 bg-[var(--base-background)] text-[var(--greyscale-900)] relative overflow-hidden">
         {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-[var(--primary-300)] rounded-full opacity-20 filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-[var(--primary-800)] rounded-full opacity-20 filter blur-3xl"></div>
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-[var(--primary-100)] rounded-full opacity-40 filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-[var(--primary-50)] rounded-full opacity-40 filter blur-3xl"></div>
 
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-16 relative z-10">
           <div className="lg:w-1/2">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-[var(--greyscale-700)]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[var(--greyscale-200)]">
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/DashboardLightmode.png"
                 alt="Analytics Dashboard"
-                className="w-full opacity-90 transform hover:scale-105 transition duration-700"
+                className="w-full transform hover:scale-105 transition duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--greyscale-900)] via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--greyscale-900)]/10 via-transparent to-transparent"></div>
             </div>
           </div>
 
@@ -149,32 +149,32 @@ export default function Home() {
             <div className="space-y-8">
               {/* Feature 1 */}
               <div className="flex gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-[var(--primary-300)]/20 border border-[var(--primary-300)]/30 flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--primary-300)] transition-all duration-300">
-                  <Zap className="text-[var(--primary-200)] h-7 w-7 group-hover:text-white" />
+                <div className="w-14 h-14 rounded-2xl bg-white border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                  <Zap className="text-[var(--base-primary)] h-7 w-7" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold mb-2">Triển khai thần tốc (3-7 ngày)</h4>
-                  <p className="text-[var(--greyscale-400)] text-lg leading-relaxed">Sử dụng kho giao diện mẫu có sẵn. Không cần chờ đợi 3-6 tháng như làm App truyền thống.</p>
+                  <h4 className="text-2xl font-bold mb-2 text-[var(--greyscale-900)]">Triển khai thần tốc (3-7 ngày)</h4>
+                  <p className="text-[var(--greyscale-500)] text-lg leading-relaxed">Sử dụng kho giao diện mẫu có sẵn. Không cần chờ đợi 3-6 tháng như làm App truyền thống.</p>
                 </div>
               </div>
               {/* Feature 2 */}
               <div className="flex gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-[var(--primary-300)]/20 border border-[var(--primary-300)]/30 flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--primary-300)] transition-all duration-300">
-                  <MessageCircle className="text-[var(--primary-200)] h-7 w-7 group-hover:text-white" />
+                <div className="w-14 h-14 rounded-2xl bg-white border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                  <MessageCircle className="text-[var(--base-primary)] h-7 w-7" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold mb-2">Tích hợp sâu ZNS & OA</h4>
-                  <p className="text-[var(--greyscale-400)] text-lg leading-relaxed">Gửi tin nhắn CSKH tự động với chi phí rẻ hơn 60% so với SMS Brandname. Tỷ lệ đọc tin trên 90%.</p>
+                  <h4 className="text-2xl font-bold mb-2 text-[var(--greyscale-900)]">Tích hợp sâu ZNS & OA</h4>
+                  <p className="text-[var(--greyscale-500)] text-lg leading-relaxed">Gửi tin nhắn CSKH tự động với chi phí rẻ hơn 60% so với SMS Brandname. Tỷ lệ đọc tin trên 90%.</p>
                 </div>
               </div>
               {/* Feature 3 */}
               <div className="flex gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-[var(--primary-300)]/20 border border-[var(--primary-300)]/30 flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--primary-300)] transition-all duration-300">
-                  <Coins className="text-[var(--primary-200)] h-7 w-7 group-hover:text-white" />
+                <div className="w-14 h-14 rounded-2xl bg-white border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                  <Coins className="text-[var(--base-primary)] h-7 w-7" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold mb-2">Tối ưu chi phí vận hành</h4>
-                  <p className="text-[var(--greyscale-400)] text-lg leading-relaxed">Không cần đội ngũ IT riêng. Chi phí duy trì hàng năm cực thấp dành cho SME.</p>
+                  <h4 className="text-2xl font-bold mb-2 text-[var(--greyscale-900)]">Tối ưu chi phí vận hành</h4>
+                  <p className="text-[var(--greyscale-500)] text-lg leading-relaxed">Không cần đội ngũ IT riêng. Chi phí duy trì hàng năm cực thấp dành cho SME.</p>
                 </div>
               </div>
             </div>

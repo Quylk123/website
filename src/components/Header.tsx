@@ -58,16 +58,17 @@ export default function Header() {
                 : "border-transparent bg-transparent"
                 }`}
         >
-            <div className="container mx-auto px-4 h-20 flex justify-between items-center">
+            <div className="container mx-auto px-4 h-16 md:h-20 flex justify-between items-center">
                 <Link href="/" className="flex items-center gap-2 group">
-                    <Image
-                        src="/zimo-logo.png"
-                        alt="Zimo Logo"
-                        width={40}
-                        height={40}
-                        className="object-contain"
-                    />
-                    <span className="text-2xl font-extrabold text-[var(--greyscale-900)] tracking-tight">
+                    <div className="relative w-8 h-8 md:w-10 md:h-10">
+                        <Image
+                            src="/zimo-logo.png"
+                            alt="Zimo Logo"
+                            fill
+                            className="object-contain"
+                        />
+                    </div>
+                    <span className="text-xl md:text-2xl font-extrabold text-[var(--greyscale-900)] tracking-tight">
                         ZIMO.VN
                     </span>
                 </Link>
@@ -116,7 +117,7 @@ export default function Header() {
 
                     <Button
                         variant="outline"
-                        className="hidden xl:inline-flex border-[var(--primary-100)] text-[var(--base-primary)] hover:bg-[var(--primary-50)]"
+                        className="!hidden xl:!inline-flex border-[var(--primary-100)] text-[var(--base-primary)] hover:bg-[var(--primary-50)]"
                         href="https://zalo.me/0899111195"
                         target="_blank"
                         leftIcon={<Phone className="h-4 w-4 animate-pulse" />}
@@ -125,7 +126,7 @@ export default function Header() {
                     </Button>
                     <Button
                         variant="primary"
-                        className="hidden lg:inline-flex shadow-md shadow-[var(--primary-200)]"
+                        className="!hidden lg:!inline-flex shadow-md shadow-[var(--primary-200)]"
                         href="http://dashboard.zimo.vn"
                         target="_blank"
                         rightIcon={<ArrowRight className="h-4 w-4" />}
@@ -145,7 +146,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden absolute top-20 left-0 w-full bg-[var(--base-background)] border-b border-[var(--greyscale-100)] shadow-lg py-4 px-4 h-[calc(100vh-80px)] overflow-y-auto">
+                <div className="lg:hidden absolute top-16 left-0 w-full bg-[var(--base-background)] border-b border-[var(--greyscale-100)] shadow-lg py-4 px-4 h-[calc(100vh-64px)] overflow-y-auto">
                     <nav className="flex flex-col gap-4">
                         {navLinks.map((item, i) => (
                             <div key={i} className="border-b border-[var(--greyscale-100)] pb-2 last:border-0">
@@ -179,21 +180,21 @@ export default function Header() {
                         <div className="mt-4 flex flex-col gap-3">
                             <Button
                                 variant="outline"
-                                className="w-full justify-center"
+                                className="w-full justify-center whitespace-nowrap"
                                 href="https://zalo.me/0899111195"
                                 target="_blank"
                                 leftIcon={<Phone className="h-4 w-4" />}
                             >
-                                Tư vấn: 0899.111.195
+                                0899.111.195
                             </Button>
                             <Button
                                 variant="primary"
-                                className="w-full justify-center"
+                                className="w-full justify-center whitespace-nowrap"
                                 href="http://dashboard.zimo.vn"
                                 target="_blank"
                                 rightIcon={<ArrowRight className="h-4 w-4" />}
                             >
-                                Đăng ký dùng thử
+                                Dùng thử ngay
                             </Button>
                         </div>
                     </nav>

@@ -42,7 +42,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <div className="text-gray-400 mb-1">Email hỗ trợ</div>
-                                        <div className="text-xl font-bold">thangnm@zimo.vn</div>
+                                        <div className="text-xl font-bold">contact@zimo.vn</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
