@@ -13,8 +13,8 @@ import ImagePreview from "@/components/ImagePreview";
 // --- DATA: IMAGES ---
 const IMAGES = {
     dashboard: {
-        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/DashboardDarkmode.png",
-        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/DashboardLightmode.png"
+        dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboarddark.png",
+        light: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/ecommercedashboardlight.png"
     },
     bookings: {
         dark: "https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/Bookings-Darkmode.png",
