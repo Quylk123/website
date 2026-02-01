@@ -47,7 +47,7 @@ export default function ZimoHotelPage() {
                             </div>
                         </div>
                         <div className="lg:w-1/2 relative">
-                            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-[var(--greyscale-0)]">
                                 <Image
                                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                                     alt="Zimo Hotel Booking Engine"

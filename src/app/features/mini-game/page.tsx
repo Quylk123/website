@@ -40,7 +40,7 @@ export default function MiniGamePage() {
                     <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
                         <div className="order-2 md:order-1">
                             <h3 className="text-3xl font-bold mb-4">Vòng Quay May Mắn (Lucky Wheel)</h3>
-                            <p className="text-lg text-gray-500 mb-6">
+                            <p className="text-lg text-[var(--greyscale-500)] mb-6">
                                 Trò chơi kinh điển luôn thu hút sự tham gia. Cấu hình tỷ lệ trúng thưởng linh hoạt, quà tặng là Voucher hoặc hiện vật. Sử dụng để tặng quà tri ân hoặc kích thích mua hàng.
                             </p>
                             <ul className="space-y-3">
@@ -54,18 +54,18 @@ export default function MiniGamePage() {
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8 text-center bg-[var(--greyscale-900)] text-white p-12 rounded-3xl">
+                    <div className="grid md:grid-cols-3 gap-8 text-center bg-[var(--greyscale-900)] text-[var(--greyscale-0)] p-12 rounded-3xl">
                         <div>
                             <div className="text-4xl font-bold text-orange-400 mb-2">x3</div>
-                            <p className="text-gray-400">Tỷ lệ để lại SĐT</p>
+                            <p className="text-[var(--greyscale-400)]">Tỷ lệ để lại SĐT</p>
                         </div>
                         <div>
                             <div className="text-4xl font-bold text-orange-400 mb-2">30s</div>
-                            <p className="text-gray-400">Thời gian triển khai</p>
+                            <p className="text-[var(--greyscale-400)]">Thời gian triển khai</p>
                         </div>
                         <div>
                             <div className="text-4xl font-bold text-orange-400 mb-2">100%</div>
-                            <p className="text-gray-400">Tự động trao giải</p>
+                            <p className="text-[var(--greyscale-400)]">Tự động trao giải</p>
                         </div>
                     </div>
                 </div>

@@ -40,6 +40,11 @@
   --status-warning: hsl(35 92% 51%);
   --status-info: hsl(201 94% 45%);
 
+  /* Footer - Adaptive (Light in Light, Dark in Dark) */
+  --footer-bg: var(--greyscale-50);
+  --footer-text: var(--greyscale-500);
+  --footer-title: var(--greyscale-900);
+
   /* Button Tokens */
   --btn-primary-bg: #3ECF8E;
   --btn-primary-text: #00331F;
@@ -50,7 +55,7 @@
 
   /* --- SEMANTIC PALETTE (Status & Badges) --- */
   /* ... (Rest of palette omitted for brevity but implied same structure) ... */
-   /* Blue (Info, Processing, Occupied) */
+  /* Blue (Info, Processing, Occupied) */
   --palette-blue-bg: #dbeafe;
   --palette-blue-badge-bg: #dbeafe;
   --palette-blue-text: #1d4ed8;
@@ -137,6 +142,11 @@
 
   --base-error: hsl(354 84% 65%);
   --status-warning: hsl(35 92% 65%);
+
+  /* Footer - Dark Mode (Adaptive) */
+  --footer-bg: var(--greyscale-50);
+  --footer-text: var(--greyscale-500);
+  --footer-title: var(--greyscale-900);
 
   --btn-primary-bg: #004529;
   --btn-primary-text: #FFFFFF;

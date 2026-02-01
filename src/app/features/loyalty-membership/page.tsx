@@ -87,7 +87,7 @@ export default function LoyaltyPage() {
                             <CardContent className="p-8">
                                 <Users className="w-12 h-12 text-purple-600 mb-6" />
                                 <h3 className="text-xl font-bold mb-3">Phân Hạng Tự Động</h3>
-                                <p className="text-gray-500">
+                                <p className="text-[var(--greyscale-500)]">
                                     Cấu hình các hạng bậc (Đồng, Bạc, Vàng, Kim Cương) dựa trên chi tiêu hoặc điểm số. Hệ thống tự động xét hạng và gửi thông báo chúc mừng.
                                 </p>
                             </CardContent>
@@ -96,7 +96,7 @@ export default function LoyaltyPage() {
                             <CardContent className="p-8">
                                 <Gift className="w-12 h-12 text-purple-600 mb-6" />
                                 <h3 className="text-xl font-bold mb-3">Tích Điểm Đổi Quà</h3>
-                                <p className="text-gray-500">
+                                <p className="text-[var(--greyscale-500)]">
                                     Khách hàng tích điểm sau mỗi lần mua hàng hoặc đặt dịch vụ. Sử dụng điểm để đổi Voucher, quà tặng hoặc trừ trực tiếp vào đơn hàng.
                                 </p>
                             </CardContent>
@@ -105,7 +105,7 @@ export default function LoyaltyPage() {
                             <CardContent className="p-8">
                                 <Zap className="w-12 h-12 text-purple-600 mb-6" />
                                 <h3 className="text-xl font-bold mb-3">Remarketing 0 Đồng</h3>
-                                <p className="text-gray-500">
+                                <p className="text-[var(--greyscale-500)]">
                                     Gửi tin nhắn ZNS chăm sóc khách hàng tự động theo kịch bản: Chúc mừng sinh nhật, Nhắc lịch hẹn, Thông báo ưu đãi riêng cho VIP.
                                 </p>
                             </CardContent>

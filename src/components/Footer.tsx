@@ -4,7 +4,7 @@ import { Facebook, Linkedin, User, Phone, Mail, MapPin, ChevronRight } from "luc
 
 export default function Footer() {
     return (
-        <footer className="bg-[var(--greyscale-900)] text-[var(--greyscale-300)] py-16 text-sm">
+        <footer className="bg-[var(--footer-bg)] text-[var(--footer-text)] py-16 text-sm transition-colors duration-300">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-1 md:col-span-2">
@@ -16,24 +16,24 @@ export default function Footer() {
                                 height={40}
                                 className="object-contain"
                             />
-                            <span className="text-2xl font-extrabold text-white tracking-tight">
+                            <span className="text-2xl font-extrabold text-[var(--footer-title)] tracking-tight">
                                 ZIMO.VN
                             </span>
                         </Link>
-                        <p className="mb-6 text-[var(--greyscale-400)] text-lg leading-relaxed pr-8">
+                        <p className="mb-6 text-[var(--footer-text)] text-lg leading-relaxed pr-8">
                             Đối tác tin cậy giúp doanh nghiệp SME chuyển đổi số, tối ưu quy trình
                             chăm sóc khách hàng và gia tăng doanh số bền vững trên nền tảng Zalo.
                         </p>
                         <div className="flex gap-4">
                             <Link
                                 href="#"
-                                className="w-10 h-10 rounded-full bg-[var(--greyscale-800)] flex items-center justify-center hover:bg-[var(--base-primary)] hover:text-white transition"
+                                className="w-10 h-10 rounded-full bg-[var(--greyscale-200)] text-[var(--greyscale-600)] flex items-center justify-center hover:bg-[var(--base-primary)] hover:text-white transition"
                             >
                                 <Facebook className="h-5 w-5" />
                             </Link>
                             <Link
                                 href="#"
-                                className="w-10 h-10 rounded-full bg-[var(--greyscale-800)] flex items-center justify-center hover:bg-[var(--base-primary)] hover:text-white transition"
+                                className="w-10 h-10 rounded-full bg-[var(--greyscale-200)] text-[var(--greyscale-600)] flex items-center justify-center hover:bg-[var(--base-primary)] hover:text-white transition"
                             >
                                 <Linkedin className="h-5 w-5" />
                             </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider">
+                        <h4 className="text-[var(--footer-title)] font-bold text-lg mb-6 uppercase tracking-wider">
                             Liên Hệ Hỗ Trợ
                         </h4>
                         <ul className="space-y-4">
@@ -66,7 +66,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider">
+                        <h4 className="text-[var(--footer-title)] font-bold text-lg mb-6 uppercase tracking-wider">
                             Giải Pháp
                         </h4>
                         <ul className="space-y-4">
@@ -114,7 +114,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-[var(--greyscale-800)] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-[var(--greyscale-500)]">
+                <div className="border-t border-[var(--greyscale-200)] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-[var(--greyscale-500)]">
                     <p>&copy; 2026 Zimo.vn. Bảo lưu mọi quyền.</p>
                     <p>
                         Phát triển bởi{" "}

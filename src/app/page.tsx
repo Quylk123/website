@@ -48,7 +48,7 @@ export default function Home() {
             <Button
               variant="outline"
               size="large"
-              className="bg-white hover:border-[var(--base-primary)] hover:text-[var(--base-primary)] hover:-translate-y-1 shadow-sm"
+              className="bg-[var(--greyscale-0)] hover:border-[var(--base-primary)] hover:text-[var(--base-primary)] hover:-translate-y-1 shadow-sm"
               href="tel:0899111195"
               leftIcon={<Headset className="h-5 w-5" />}
             >
@@ -189,7 +189,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Basic Package */}
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] hover:shadow-xl transition duration-300 flex flex-col">
+            <div className="bg-[var(--greyscale-0)] p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] hover:shadow-xl transition duration-300 flex flex-col">
               <h3 className="text-xl font-bold text-[var(--greyscale-500)] mb-4 uppercase tracking-wider">Gói Cơ Bản</h3>
               <div className="text-5xl font-extrabold text-[var(--greyscale-900)] mb-6">Liên hệ<span className="text-lg text-[var(--greyscale-400)] font-normal">/năm</span></div>
               <ul className="text-left space-y-4 mb-10 text-[var(--greyscale-500)] flex-1">
@@ -202,7 +202,7 @@ export default function Home() {
             </div>
 
             {/* Growth Package (Highlighted) */}
-            <div className="bg-white p-8 rounded-3xl shadow-2xl border-2 border-[var(--base-primary)] relative transform md:-translate-y-6 z-10 flex flex-col">
+            <div className="bg-[var(--greyscale-0)] p-8 rounded-3xl shadow-2xl border-2 border-[var(--base-primary)] relative transform md:-translate-y-6 z-10 flex flex-col">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[var(--base-primary)] text-white px-6 py-2 rounded-full text-sm font-bold uppercase shadow-md">Khuyên dùng</div>
               <h3 className="text-xl font-bold text-[var(--base-primary)] mb-4 uppercase tracking-wider">Gói Tăng Trưởng</h3>
               <div className="text-5xl font-extrabold text-[var(--greyscale-900)] mb-6">Liên hệ<span className="text-lg text-[var(--greyscale-400)] font-normal">/năm</span></div>
@@ -216,7 +216,7 @@ export default function Home() {
             </div>
 
             {/* Enterprise Package */}
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] hover:shadow-xl transition duration-300 flex flex-col">
+            <div className="bg-[var(--greyscale-0)] p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] hover:shadow-xl transition duration-300 flex flex-col">
               <h3 className="text-xl font-bold text-[var(--greyscale-500)] mb-4 uppercase tracking-wider">Gói Doanh Nghiệp</h3>
               <div className="text-5xl font-extrabold text-[var(--greyscale-900)] mb-6">Custom</div>
               <ul className="text-left space-y-4 mb-10 text-[var(--greyscale-500)] flex-1">

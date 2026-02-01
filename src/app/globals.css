@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "../styles/figma-variables.css";
 
+/* Light mode (default) - uses Figma variables from :root */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--base-background);
+  --foreground: var(--greyscale-900);
+  color-scheme: light;
 }
 
 @theme inline {
@@ -11,11 +13,170 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Map Gray Scale to Adaptive Greyscale */
+  --color-gray-900: var(--greyscale-900);
+  --color-gray-800: var(--greyscale-700);
+  --color-gray-700: var(--greyscale-700);
+  --color-gray-600: var(--greyscale-500);
+  --color-gray-500: var(--greyscale-500);
+  --color-gray-400: var(--greyscale-400);
+  --color-gray-300: var(--greyscale-300);
+  --color-gray-200: var(--greyscale-100);
+  --color-gray-100: var(--greyscale-50);
+  --color-gray-50: var(--greyscale-50);
+
+  /* Map Product Colors to Adaptive Semantic Palette */
+  /* Blue (Hotel/Features) */
+  --color-blue-50: var(--palette-blue-bg);
+  --color-blue-100: var(--palette-blue-bg);
+  --color-blue-200: var(--palette-blue-border);
+  --color-blue-500: var(--palette-blue-text);
+  --color-blue-600: var(--palette-blue-text);
+  --color-blue-700: var(--palette-blue-text);
+  --color-blue-800: var(--palette-blue-text);
+  --color-blue-900: var(--palette-blue-badge-bg);
+  /* Use badge bg for dark sections to stay dark */
+
+  /* Orange (Game/Features) */
+  --color-orange-50: var(--palette-orange-bg);
+  --color-orange-100: var(--palette-orange-bg);
+  --color-orange-200: var(--palette-orange-border);
+  --color-orange-500: var(--palette-orange-text);
+  --color-orange-600: var(--palette-orange-text);
+  --color-orange-700: var(--palette-orange-text);
+  --color-orange-800: var(--palette-orange-text);
+
+  /* Purple (Loyalty) */
+  --color-purple-50: var(--palette-purple-bg);
+  --color-purple-100: var(--palette-purple-bg);
+  --color-purple-200: var(--palette-purple-border);
+  --color-purple-500: var(--palette-purple-text);
+  --color-purple-600: var(--palette-purple-text);
+  --color-purple-700: var(--palette-purple-text);
+  --color-purple-800: var(--palette-purple-text);
+
+  /* Green (Success/Primary Alternate) */
+  --color-green-50: var(--palette-green-bg);
+  --color-green-100: var(--palette-green-bg);
+  --color-green-200: var(--palette-green-border);
+  --color-green-500: var(--palette-green-text);
+  --color-green-600: var(--palette-green-text);
+  --color-green-700: var(--palette-green-text);
+
+  /* Pink */
+  --color-pink-50: var(--palette-pink-bg);
+  --color-pink-100: var(--palette-pink-bg);
+  --color-pink-500: var(--palette-pink-text);
+  --color-pink-600: var(--palette-pink-text);
+  --color-pink-700: var(--palette-pink-text);
+
+  /* Teal */
+  --color-teal-50: var(--palette-teal-bg);
+  --color-teal-100: var(--palette-teal-bg);
+  --color-teal-500: var(--palette-teal-text);
+  --color-teal-600: var(--palette-teal-text);
+  --color-teal-700: var(--palette-teal-text);
+
+  /* Yellow */
+  --color-yellow-50: var(--palette-yellow-bg);
+  --color-yellow-100: var(--palette-yellow-bg);
+  --color-yellow-400: var(--palette-yellow-border);
+  --color-yellow-500: var(--palette-yellow-text);
+  --color-yellow-600: var(--palette-yellow-text);
+
+  /* Indigo (Mapped to Blue) */
+  --color-indigo-50: var(--palette-blue-bg);
+  --color-indigo-100: var(--palette-blue-bg);
+  --color-indigo-500: var(--palette-blue-text);
+  --color-indigo-600: var(--palette-blue-text);
+  --color-indigo-700: var(--palette-blue-text);
 }
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+/* Dark mode - follows browser preference, applies Figma dark variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override with dark mode Figma variables */
+    --primary-300: hsl(var(--brand-h) var(--brand-s) 48%);
+    --primary-200: hsl(var(--brand-h) var(--brand-s) 65%);
+    --primary-100: hsl(var(--brand-h) var(--brand-s) 75%);
+    --primary-50: hsl(var(--brand-h) var(--brand-s) 20%);
+    --primary-0: hsl(var(--brand-h) var(--brand-s) 10%);
+
+    --greyscale-900: #f8f9fa;
+    --greyscale-700: #e9ecef;
+    --greyscale-500: #adb5bd;
+    --greyscale-400: #6c757d;
+    --greyscale-300: #495057;
+    --greyscale-100: #2a2a2a;
+    --greyscale-50: #1c1c1c;
+    --greyscale-25: #121212;
+    --greyscale-0: #0d0d0d;
+
+    --base-primary: var(--primary-200);
+    --base-background: var(--greyscale-0);
+    --base-text-paragraph: var(--greyscale-500);
+
+    --base-error: hsl(354 84% 65%);
+    --status-warning: hsl(35 92% 65%);
+
+    --btn-primary-bg: #004529;
+    --btn-primary-text: #FFFFFF;
+    --btn-primary-border: rgba(16, 185, 129, 0.3);
+    --btn-primary-hover-bg: #004529;
+
+    --additional-white: #1c1c1c;
+
+    /* Palette - Dark Mode */
+    --palette-blue-bg: #1e3a5f;
+    --palette-blue-badge-bg: #1e3a5f;
+    --palette-blue-text: #93c5fd;
+    --palette-blue-border: #1d4ed8;
+
+    --palette-green-bg: #064e3b;
+    --palette-green-badge-bg: #064e3b;
+    --palette-green-text: #6ee7b7;
+    --palette-green-border: #047857;
+
+    --palette-red-bg: #450a0a;
+    --palette-red-badge-bg: #450a0a;
+    --palette-red-text: #fca5a5;
+    --palette-red-border: #b91c1c;
+
+    --palette-orange-bg: #431407;
+    --palette-orange-badge-bg: #431407;
+    --palette-orange-text: #fdba74;
+    --palette-orange-border: #c2410c;
+
+    --palette-yellow-bg: #422006;
+    --palette-yellow-badge-bg: #422006;
+    --palette-yellow-text: #fde047;
+    --palette-yellow-border: #a16207;
+
+    --palette-grey-bg: var(--greyscale-100);
+    --palette-grey-badge-bg: var(--greyscale-100);
+    --palette-grey-text: var(--greyscale-500);
+    --palette-grey-border: var(--greyscale-400);
+
+    --palette-purple-bg: #3b0764;
+    --palette-purple-badge-bg: #3b0764;
+    --palette-purple-text: #d8b4fe;
+    --palette-purple-border: #7e22ce;
+
+    --palette-teal-bg: #042f2e;
+    --palette-teal-badge-bg: #042f2e;
+    --palette-teal-text: #5eead4;
+    --palette-teal-border: #0f766e;
+
+    --palette-pink-bg: #500724;
+    --palette-pink-badge-bg: #500724;
+    --palette-pink-text: #f9a8d4;
+    --palette-pink-border: #be185d;
+
+    --background: var(--base-background);
+    --foreground: var(--greyscale-900);
+    color-scheme: dark;
+  }
 }
 
 body {

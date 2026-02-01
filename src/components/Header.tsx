@@ -88,7 +88,7 @@ export default function Header() {
                             {/* Dropdown Menu */}
                             {item.children && (
                                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-64">
-                                    <div className="bg-white rounded-xl shadow-xl border border-[var(--greyscale-100)] p-2 overflow-hidden">
+                                    <div className="bg-[var(--greyscale-0)] rounded-xl shadow-xl border border-[var(--greyscale-100)] p-2 overflow-hidden">
                                         {item.children.map((child, j) => (
                                             <Link
                                                 key={j}

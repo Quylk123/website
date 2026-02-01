@@ -42,7 +42,7 @@ export default function VoucherPage() {
                             <CardContent className="p-8">
                                 <Filter className="w-10 h-10 text-red-500 mb-6" />
                                 <h3 className="text-xl font-bold mb-3">Target Đúng Đối Tượng</h3>
-                                <p className="text-gray-500 leading-relaxed">
+                                <p className="text-[var(--greyscale-500)] leading-relaxed">
                                     Chỉ phát voucher cho nhóm khách hàng cụ thể: Khách hàng mới, Khách hàng VIP, hoặc Khách hàng có sinh nhật trong tháng.
                                 </p>
                             </CardContent>
@@ -51,7 +51,7 @@ export default function VoucherPage() {
                             <CardContent className="p-8">
                                 <Clock className="w-10 h-10 text-red-500 mb-6" />
                                 <h3 className="text-xl font-bold mb-3">Giới Hạn Thông Minh</h3>
-                                <p className="text-gray-500 leading-relaxed">
+                                <p className="text-[var(--greyscale-500)] leading-relaxed">
                                     Cấu hình chi tiết: Thời gian áp dụng, Số lượng phát hành, Số lượt dùng tối đa trên mỗi khách hàng, Giá trị đơn hàng tối thiểu.
                                 </p>
                             </CardContent>
@@ -60,7 +60,7 @@ export default function VoucherPage() {
                             <CardContent className="p-8">
                                 <BarChart className="w-10 h-10 text-red-500 mb-6" />
                                 <h3 className="text-xl font-bold mb-3">Đo Lường Hiệu Quả</h3>
-                                <p className="text-gray-500 leading-relaxed">
+                                <p className="text-[var(--greyscale-500)] leading-relaxed">
                                     Theo dõi real-time số lượng voucher đã phát, đã dùng và doanh thu mang lại từ voucher. Biết ngay chiến dịch nào hiệu quả.
                                 </p>
                             </CardContent>

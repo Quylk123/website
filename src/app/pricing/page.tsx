@@ -22,10 +22,10 @@ export default function PricingPage() {
                     {/* Pricing Grid */}
                     <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
                         {/* Basic Package */}
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] flex flex-col hover:border-[var(--base-primary)] transition-all">
+                        <div className="bg-[var(--greyscale-0)] p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] flex flex-col hover:border-[var(--base-primary)] transition-all">
                             <h3 className="text-xl font-bold text-[var(--greyscale-500)] mb-4 uppercase tracking-wider">Start-up</h3>
                             <div className="text-5xl font-extrabold text-[var(--greyscale-900)] mb-6">Liên hệ<span className="text-lg text-[var(--greyscale-400)] font-normal">/năm</span></div>
-                            <p className="text-gray-500 mb-8 h-12">Dành cho cá nhân hoặc cửa hàng nhỏ mới bắt đầu kinh doanh online.</p>
+                            <p className="text-[var(--greyscale-500)] mb-8 h-12">Dành cho cá nhân hoặc cửa hàng nhỏ mới bắt đầu kinh doanh online.</p>
 
                             <div className="flex-1 space-y-4 mb-8">
                                 <FeatureItem text="Website bán hàng cơ bản" />
@@ -38,11 +38,11 @@ export default function PricingPage() {
                         </div>
 
                         {/* Growth Package */}
-                        <div className="bg-white p-8 rounded-3xl shadow-xl border-2 border-[var(--base-primary)] flex flex-col relative transform md:-translate-y-4 z-10">
+                        <div className="bg-[var(--greyscale-0)] p-8 rounded-3xl shadow-xl border-2 border-[var(--base-primary)] flex flex-col relative transform md:-translate-y-4 z-10">
                             <div className="absolute top-0 right-0 bg-[var(--base-primary)] text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">POPULAR</div>
                             <h3 className="text-xl font-bold text-[var(--base-primary)] mb-4 uppercase tracking-wider">Growth</h3>
                             <div className="text-5xl font-extrabold text-[var(--greyscale-900)] mb-6">Liên hệ<span className="text-lg text-[var(--greyscale-400)] font-normal">/năm</span></div>
-                            <p className="text-gray-500 mb-8 h-12">Giải pháp hoàn hảo cho doanh nghiệp đang trên đà tăng trưởng mạnh.</p>
+                            <p className="text-[var(--greyscale-500)] mb-8 h-12">Giải pháp hoàn hảo cho doanh nghiệp đang trên đà tăng trưởng mạnh.</p>
 
                             <div className="flex-1 space-y-4 mb-8">
                                 <FeatureItem text="Mọi tính năng gói Start-up" highlighted />
@@ -56,10 +56,10 @@ export default function PricingPage() {
                         </div>
 
                         {/* Enterprise Package */}
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] flex flex-col hover:border-[var(--base-primary)] transition-all">
+                        <div className="bg-[var(--greyscale-0)] p-8 rounded-3xl shadow-sm border border-[var(--greyscale-200)] flex flex-col hover:border-[var(--base-primary)] transition-all">
                             <h3 className="text-xl font-bold text-[var(--greyscale-500)] mb-4 uppercase tracking-wider">Enterprise</h3>
                             <div className="text-5xl font-extrabold text-[var(--greyscale-900)] mb-6">Custom</div>
-                            <p className="text-gray-500 mb-8 h-12">Thiết kế riêng biệt và tích hợp hệ thống theo yêu cầu doanh nghiệp lớn.</p>
+                            <p className="text-[var(--greyscale-500)] mb-8 h-12">Thiết kế riêng biệt và tích hợp hệ thống theo yêu cầu doanh nghiệp lớn.</p>
 
                             <div className="flex-1 space-y-4 mb-8">
                                 <FeatureItem text="Thiết kế UI/UX độc quyền" />
@@ -75,7 +75,7 @@ export default function PricingPage() {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-[var(--greyscale-0)]">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <h2 className="text-3xl font-bold text-center mb-12">Câu Hỏi Thường Gặp</h2>
                     <div className="space-y-4">

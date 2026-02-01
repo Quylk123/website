@@ -47,7 +47,7 @@ export default function ZimoEcommercePage() {
                             </div>
                         </div>
                         <div className="lg:w-1/2 relative">
-                            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition duration-500">
+                            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-[var(--greyscale-0)] transform rotate-2 hover:rotate-0 transition duration-500">
                                 <Image
                                     src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                                     alt="Zimo Ecommerce Dashboard"
@@ -57,12 +57,12 @@ export default function ZimoEcommercePage() {
                                 />
 
                                 {/* Floating Badge */}
-                                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3 animate-bounce-slow">
+                                <div className="absolute -bottom-6 -left-6 bg-[var(--greyscale-0)] p-4 rounded-xl shadow-lg flex items-center gap-3 animate-bounce-slow">
                                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
                                         <Smartphone className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <div className="text-sm text-gray-500">Đơn hàng mới</div>
+                                        <div className="text-sm text-[var(--greyscale-500)]">Đơn hàng mới</div>
                                         <div className="font-bold text-lg">+128 Đơn/ngày</div>
                                     </div>
                                 </div>

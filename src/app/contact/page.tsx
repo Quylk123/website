@@ -21,9 +21,9 @@ export default function ContactPage() {
 
             <section className="py-20 -mt-16">
                 <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="grid md:grid-cols-2 bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div className="grid md:grid-cols-2 bg-[var(--greyscale-0)] rounded-3xl shadow-xl overflow-hidden">
                         {/* Contact Info */}
-                        <div className="p-12 bg-[var(--greyscale-900)] text-white">
+                        <div className="p-12 bg-[var(--greyscale-900)] text-[var(--greyscale-0)]">
                             <h3 className="text-2xl font-bold mb-8">Thông Tin Liên Hệ</h3>
                             <div className="space-y-8">
                                 <div className="flex items-start gap-4">
