@@ -92,7 +92,7 @@ export default function BlogPage() {
                         viewport={{ once: true, margin: "-100px" }}
                         variants={fadeInUp}
                     >
-                        <Link href={`/blog/${blogPosts[0].slug}`}>
+                        <Link href={`/resources/blog/${blogPosts[0].slug}`}>
                             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)] group cursor-pointer">
                                 <div className="bg-gradient-to-r from-[var(--primary-100)] to-[var(--primary-50)] p-8">
                                     <div className="flex items-center gap-2 mb-4">
@@ -138,7 +138,7 @@ export default function BlogPage() {
                     >
                         {blogPosts.slice(1).map((post) => (
                             <motion.div key={post.id} variants={fadeInUp}>
-                                <Link href={`/blog/${post.slug}`}>
+                                <Link href={`/resources/blog/${post.slug}`}>
                                     <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-200)] bg-white group cursor-pointer">
                                         <CardHeader>
                                             <div className="flex items-center justify-between mb-4">
