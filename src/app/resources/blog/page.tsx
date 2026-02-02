@@ -88,36 +88,34 @@ export default function BlogPage() {
                         viewport={{ once: true, margin: "-100px" }}
                         variants={fadeInUp}
                     >
-                        <Link href={`/resources/blog/${blogPosts[0].slug}`}>
-                            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)] group cursor-pointer">
-                                <div className="bg-gradient-to-r from-[var(--primary-100)] to-[var(--primary-50)] p-8">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <span className="bg-[var(--base-primary)] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                            Nổi bật
-                                        </span>
-                                        <span className="text-[var(--base-primary)] text-sm font-medium">
-                                            {blogPosts[0].category}
-                                        </span>
+                        <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)]">
+                            <div className="bg-gradient-to-r from-[var(--primary-100)] to-[var(--primary-50)] p-8">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <span className="bg-[var(--base-primary)] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                        Nổi bật
+                                    </span>
+                                    <span className="text-[var(--base-primary)] text-sm font-medium">
+                                        {blogPosts[0].category}
+                                    </span>
+                                </div>
+                                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-[var(--greyscale-900)]">
+                                    {blogPosts[0].title}
+                                </h2>
+                                <p className="text-lg text-[var(--greyscale-600)] mb-6 leading-relaxed">
+                                    {blogPosts[0].excerpt}
+                                </p>
+                                <div className="flex items-center gap-6 text-[var(--greyscale-500)]">
+                                    <div className="flex items-center gap-2">
+                                        <Calendar className="h-4 w-4" />
+                                        <span className="text-sm">{blogPosts[0].publishDate}</span>
                                     </div>
-                                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 group-hover:text-[var(--base-primary)] transition-colors">
-                                        {blogPosts[0].title}
-                                    </h2>
-                                    <p className="text-lg text-[var(--greyscale-600)] mb-6 leading-relaxed">
-                                        {blogPosts[0].excerpt}
-                                    </p>
-                                    <div className="flex items-center gap-6 text-[var(--greyscale-500)]">
-                                        <div className="flex items-center gap-2">
-                                            <Calendar className="h-4 w-4" />
-                                            <span className="text-sm">{blogPosts[0].publishDate}</span>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <Clock className="h-4 w-4" />
-                                            <span className="text-sm">{blogPosts[0].readTime}</span>
-                                        </div>
+                                    <div className="flex items-center gap-2">
+                                        <Clock className="h-4 w-4" />
+                                        <span className="text-sm">{blogPosts[0].readTime}</span>
                                     </div>
                                 </div>
-                            </Card>
-                        </Link>
+                            </div>
+                        </Card>
                     </motion.div>
                 </div>
             </section>
@@ -134,34 +132,31 @@ export default function BlogPage() {
                     >
                         {blogPosts.slice(1).map((post) => (
                             <motion.div key={post.id} variants={fadeInUp}>
-                                <Link href={`/resources/blog/${post.slug}`}>
-                                    <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-200)] bg-white group cursor-pointer">
-                                        <CardHeader>
-                                            <div className="flex items-center justify-between mb-4">
-                                                <span className="bg-[var(--greyscale-100)] text-[var(--greyscale-700)] px-3 py-1 rounded-full text-sm font-medium">
-                                                    {post.category}
-                                                </span>
-                                                <div className="flex items-center gap-3 text-[var(--greyscale-400)] text-xs">
-                                                    <span>{post.publishDate}</span>
-                                                    <span>•</span>
-                                                    <span>{post.readTime}</span>
-                                                </div>
+                                <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-200)] bg-white group">
+                                    <CardHeader>
+                                        <div className="flex items-center justify-between mb-4">
+                                            <span className="bg-[var(--greyscale-100)] text-[var(--greyscale-700)] px-3 py-1 rounded-full text-sm font-medium">
+                                                {post.category}
+                                            </span>
+                                            <div className="flex items-center gap-3 text-[var(--greyscale-400)] text-xs">
+                                                <span>{post.publishDate}</span>
+                                                <span>•</span>
+                                                <span>{post.readTime}</span>
                                             </div>
-                                            <CardTitle className="text-xl font-bold mb-3 group-hover:text-[var(--base-primary)] transition-colors line-clamp-2">
-                                                {post.title}
-                                            </CardTitle>
-                                            <CardDescription className="text-[var(--greyscale-600)] leading-relaxed line-clamp-3">
-                                                {post.excerpt}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <div className="flex items-center gap-2 text-[var(--base-primary)] font-semibold group-hover:gap-3 transition-all">
-                                                Đọc thêm
-                                                <ArrowRight className="h-4 w-4" />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </Link>
+                                        </div>
+                                        <CardTitle className="text-xl font-bold mb-3 group-hover:text-[var(--base-primary)] transition-colors line-clamp-2">
+                                            {post.title}
+                                        </CardTitle>
+                                        <CardDescription className="text-[var(--greyscale-600)] leading-relaxed line-clamp-3">
+                                            {post.excerpt}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <div className="flex items-center gap-2 text-[var(--greyscale-400)] font-semibold">
+                                            <span className="text-[var(--base-primary)]">Sắp cập nhật...</span>
+                                        </div>
+                                    </CardContent>
+                                </Card>
                             </motion.div>
                         ))}
                     </motion.div>
