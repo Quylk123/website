@@ -1,13 +1,9 @@
-import { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Clock, Calendar, Share2, Heart } from "lucide-react";
 import { motion } from "framer-motion";
-
-export const metadata: Metadata = {
-    title: "Zalo Mini App là gì? Tại sao doanh nghiệp SME cần ngay?",
-    description: "Khám phá sức mạnh của Zalo Mini App - công cụ giúp doanh nghiệp SME tăng trưởng 200% trong 3 tháng với chi phí tối ưu.",
-};
 
 export default function BlogPostPage() {
     const publishDate = "03/02/2026";
