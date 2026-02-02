@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, Variants } from "framer-motion";
-
-export const metadata: Metadata = {
-    title: "Blog & Kiến Thức Kinh Doanh - Zimo",
-    description: "Chia sẻ kiến thức kinh doanh, marketing và chuyển đổi số cho doanh nghiệp SME.",
-};
 
 // Blog posts data
 const blogPosts = [
