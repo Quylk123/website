@@ -163,7 +163,7 @@ export default function BlogPostPage() {
 
                     <h3 className="text-2xl font-bold mb-4 text-[var(--greyscale-900)]">3. Flash Sale Điểm Thấp</h3>
                     <p className="text-[var(--base-text-paragraph)] leading-relaxed mb-4">
-                        20 người có điểm < 2000: "Cơ hội đổi điểm! Voucher 200,000đ chỉ còn 100,000đ trong 24h!"
+                        20 người có điểm dưới 2000: "Cơ hội đổi điểm! Voucher 200,000đ chỉ còn 100,000đ trong 24h!"
                     </p>
                     <p className="text-[var(--greyscale-500)] mb-6">
                         <em>Kết quả: Tăng 30% đơn dùng điểm</em>
