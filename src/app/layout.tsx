@@ -47,7 +47,7 @@ export default function RootLayout({
         {/* Floating Widget - Global */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group">
           <div className="bg-[var(--greyscale-0)] text-[var(--greyscale-900)] px-4 py-2 rounded-lg shadow-lg mb-2 mr-2 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
-            Chat ngay với Thắng Zimo! 👋
+            Chat ngay với chúng tôi! 👋
           </div>
           <a href="https://zalo.me/0899111195" target="_blank" className="w-16 h-16 bg-[var(--base-primary)] rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,99,235,0.5)] hover:bg-[var(--primary-300)] hover:scale-110 transition-all duration-300 relative overflow-hidden">
             <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-30 animate-ping"></span>
