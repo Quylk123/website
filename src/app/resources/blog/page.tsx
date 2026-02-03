@@ -72,7 +72,7 @@ export default function BlogPage() {
                         <motion.h1 variants={fadeInUp} className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
                             Blog & Kiến Thức Kinh Doanh
                         </motion.h1>
-                        <motion.p variants={fadeInUp} className="text-xl text-[var(--greyscale-500)] max-w-3xl">
+                        <motion.p variants={fadeInUp} className="text-xl text-[var(--base-text-paragraph)] max-w-3xl">
                             Chia sẻ kinh nghiệm thực chiến về Zalo Mini App, chuyển đổi số và tăng trưởng doanh thu cho SME.
                         </motion.p>
                     </motion.div>
@@ -89,7 +89,7 @@ export default function BlogPage() {
                         variants={fadeInUp}
                     >
                         <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)]">
-                            <div className="bg-gradient-to-r from-[var(--primary-50)] to-transparent p-8">
+                            <div className="bg-[var(--primary-50)] p-8">
                                 <div className="flex items-center gap-2 mb-4">
                                     <span className="bg-[var(--base-primary)] text-white px-3 py-1 rounded-full text-sm font-semibold">
                                         Nổi bật
@@ -101,10 +101,10 @@ export default function BlogPage() {
                                 <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-[var(--greyscale-900)]">
                                     {blogPosts[0].title}
                                 </h2>
-                                <p className="text-lg text-[var(--greyscale-600)] mb-6 leading-relaxed">
+                                <p className="text-lg text-[var(--base-text-paragraph)] mb-6 leading-relaxed">
                                     {blogPosts[0].excerpt}
                                 </p>
-                                <div className="flex items-center gap-6 text-[var(--greyscale-500)]">
+                                <div className="flex items-center gap-6 text-[var(--greyscale-400)]">
                                     <div className="flex items-center gap-2">
                                         <Calendar className="h-4 w-4" />
                                         <span className="text-sm">{blogPosts[0].publishDate}</span>
@@ -132,10 +132,10 @@ export default function BlogPage() {
                     >
                         {blogPosts.slice(1).map((post) => (
                             <motion.div key={post.id} variants={fadeInUp}>
-                                <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-100)] bg-white group">
+                                <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-100)] bg-[var(--greyscale-0)] group">
                                     <CardHeader>
                                         <div className="flex items-center justify-between mb-4">
-                                            <span className="bg-[var(--greyscale-50)] text-[var(--greyscale-700)] px-3 py-1 rounded-full text-sm font-medium">
+                                            <span className="bg-[var(--palette-blue-badge-bg)] text-[var(--palette-blue-text)] px-3 py-1 rounded-full text-sm font-medium">
                                                 {post.category}
                                             </span>
                                             <div className="flex items-center gap-3 text-[var(--greyscale-400)] text-xs">
@@ -147,7 +147,7 @@ export default function BlogPage() {
                                         <CardTitle className="text-xl font-bold mb-3 group-hover:text-[var(--base-primary)] transition-colors line-clamp-2">
                                             {post.title}
                                         </CardTitle>
-                                        <CardDescription className="text-[var(--greyscale-600)] leading-relaxed line-clamp-3">
+                                        <CardDescription className="text-[var(--base-text-paragraph)] leading-relaxed line-clamp-3">
                                             {post.excerpt}
                                         </CardDescription>
                                     </CardHeader>
@@ -171,12 +171,12 @@ export default function BlogPage() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
-                        className="bg-gradient-to-r from-[var(--primary-50)] to-transparent rounded-3xl p-8 md:p-12 text-center"
+                        className="bg-[var(--primary-50)] rounded-3xl p-8 md:p-12 text-center"
                     >
                         <h3 className="text-3xl font-bold mb-4">
                             Đăng Ký Nhận Kiến Thức Mới
                         </h3>
-                        <p className="text-[var(--greyscale-600)] mb-8">
+                        <p className="text-[var(--base-text-paragraph)] mb-8">
                             Nhận bản tin hàng tuần với thủ thuật, case study và cập nhật mới nhất về Zalo Mini App.
                         </p>
                         <a
