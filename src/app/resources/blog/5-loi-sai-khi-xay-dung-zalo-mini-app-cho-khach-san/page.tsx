@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "5 Lỗi Sai Khi Xây Dựng Zalo Mini App Cho Khách Sạn | Zimo",
@@ -43,12 +44,32 @@ export default function BlogPostPage() {
 
             {/* Content */}
             <div className="container mx-auto px-4 py-12 max-w-4xl">
+                {/* Hero Image */}
+                <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
+                    <Image
+                        src="https://images.unsplash.com/photo-1566073771259-6a8506099975?w=1200&h=600&fit=crop"
+                        alt="Khách sạn sử dụng Zalo Mini App"
+                        width={1200}
+                        height={600}
+                        className="w-full h-auto object-cover"
+                    />
+                </div>
+
                 <div className="prose prose-lg max-w-none">
                     <p className="text-xl text-[var(--base-text-paragraph)] leading-relaxed mb-8">
                         Trong 2 năm làm việc với <strong className="text-[var(--greyscale-900)]">50+ khách sạn và homestay</strong>, Zimo đã gặp không ít trường hợp khách hàng lãng phí tiền và thời gian vì những sai lầm có thể tránh được. Bài này tổng hợp 5 lỗi phổ biến nhất.
                     </p>
 
                     <h2 className="text-3xl font-bold mb-6 text-[var(--greyscale-900)]">Lỗi #1: Quá Nghiêng Về "Tính Năng" Mà Quên "Trải Nghiệm Khách Hàng"</h2>
+                    <div className="mb-6 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&h=500&fit=crop"
+                            alt="Mobile booking app UX"
+                            width={1200}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
                     <p className="text-[var(--base-text-paragraph)] leading-relaxed mb-4">
                         Sai lầm này rất phổ biến. Khách hàng liệt kê hàng tá tính năng: đặt phòng, thanh toán, tích điểm, voucher, feedback, live chat, push notification... mà quên mất điều quan trọng nhất: <strong className="text-[var(--greyscale-900)]">trải nghiệm người dùng (UX)</strong>.
                     </p>
@@ -67,6 +88,15 @@ export default function BlogPostPage() {
                     </p>
 
                     <h2 className="text-3xl font-bold mb-6 text-[var(--greyscale-900)]">Lỗi #2: Thiếu Sơ Đồ Phòng (Room Plan) Trực Quan</h2>
+                    <div className="mb-6 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&h=500&fit=crop"
+                            alt="Sơ đồ phòng khách sạn"
+                            width={1200}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
                     <p className="text-[var(--base-text-paragraph)] leading-relaxed mb-4">
                         Khách sạn 10-30 phòng thường dùng table listing. Nhưng với khách sạn lớn hơn, table trở nên <strong className="text-[var(--greyscale-900)]">khó quản lý</strong>.
                     </p>
@@ -85,6 +115,15 @@ export default function BlogPostPage() {
                     </p>
 
                     <h2 className="text-3xl font-bold mb-6 text-[var(--greyscale-900)]">Lỗi #3: Không Tích Hợp Với PMS/POS Hiện Tại</h2>
+                    <div className="mb-6 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=500&fit=crop"
+                            alt="Hệ thống tích hợp khách sạn"
+                            width={1200}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
                     <p className="text-[var(--base-text-paragraph)] leading-relaxed mb-4">
                         Nhiều khách sạn muốn "tự làm tất cả" — booking app, POS, PMS... nhưng thực tế:
                     </p>
@@ -104,6 +143,15 @@ export default function BlogPostPage() {
                     </p>
 
                     <h2 className="text-3xl font-bold mb-6 text-[var(--greyscale-900)]">Lỗi #4: Quên Tích Hợp ZNS Để Nhắc Lịch Hẹn</h2>
+                    <div className="mb-6 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&h=500&fit=crop"
+                            alt="Tin nhắn Zalo ZNS"
+                            width={1200}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
                     <p className="text-[var(--base-text-paragraph)] leading-relaxed mb-4">
                         Khách đặt phòng xong... và không còn gì nữa. Đến ngày check-in mới nhớ ra.
                     </p>
@@ -122,6 +170,15 @@ export default function BlogPostPage() {
                     </p>
 
                     <h2 className="text-3xl font-bold mb-6 text-[var(--greyscale-900)]">Lỗi #5: Không Có Hệ Thống Tích Điểm (Loyalty)</h2>
+                    <div className="mb-6 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&h=500&fit=crop"
+                            alt="Hệ thống tích điểm khách hàng"
+                            width={1200}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
                     <p className="text-[var(--base-text-paragraph)] leading-relaxed mb-4">
                         Khách sạn trung bình: <strong className="text-[var(--greyscale-900)]">30% khách hàng quay lại</strong>. Nhưng với Loyalty, con số này có thể tăng lên <strong className="text-[var(--greyscale-900)]">50-60%</strong>.
                     </p>
@@ -140,6 +197,15 @@ export default function BlogPostPage() {
                     </p>
 
                     <h2 className="text-3xl font-bold mb-6 text-[var(--greyscale-900)]">Case Study: Khách Sạn Y Tăng ROI 300%</h2>
+                    <div className="mb-6 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&h=500&fit=crop"
+                            alt="Khách sạn Đà Nẵng"
+                            width={1200}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
                     <div className="bg-[var(--palette-green-badge-bg)] p-6 rounded-2xl mb-8">
                         <h3 className="text-xl font-bold mb-4 text-[var(--greyscale-900)]">📊 Khách sạn Y (20 phòng, Đà Nẵng)</h3>
                         <p className="text-[var(--base-text-paragraph)] mb-4">
