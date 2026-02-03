@@ -59,14 +59,14 @@ export default function BlogPage() {
     return (
         <div className="flex flex-col bg-[var(--base-background)] text-[var(--greyscale-900)] font-sans min-h-screen">
             {/* Header Section */}
-            <section className="pt-20 pb-16 bg-gradient-to-b from-[var(--primary-50)] to-transparent">
+            <section className="pt-20 pb-16 bg-[var(--greyscale-50)]">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
                     >
-                        <motion.div variants={fadeInUp} className="inline-block py-1.5 px-4 rounded-full bg-[var(--primary-100)] border border-[var(--primary-200)] text-[var(--base-primary)] text-sm font-semibold mb-6">
+                        <motion.div variants={fadeInUp} className="inline-block py-1.5 px-4 rounded-full bg-[var(--primary-50)] border border-[var(--primary-100)] text-[var(--base-primary)] text-sm font-semibold mb-6 shadow-sm">
                             📚 Kiến thức & Thủ thuật
                         </motion.div>
                         <motion.h1 variants={fadeInUp} className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
@@ -89,7 +89,7 @@ export default function BlogPage() {
                         variants={fadeInUp}
                     >
                         <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)]">
-                            <div className="bg-gradient-to-r from-[var(--primary-100)] to-[var(--primary-50)] p-8">
+                            <div className="bg-gradient-to-r from-[var(--primary-50)] to-transparent p-8">
                                 <div className="flex items-center gap-2 mb-4">
                                     <span className="bg-[var(--base-primary)] text-white px-3 py-1 rounded-full text-sm font-semibold">
                                         Nổi bật
@@ -121,7 +121,7 @@ export default function BlogPage() {
             </section>
 
             {/* Blog Grid */}
-            <section className="py-16 px-4 bg-[var(--greyscale-50)]">
+            <section className="py-16 px-4 bg-[var(--base-background)]">
                 <div className="container mx-auto max-w-5xl">
                     <motion.div
                         initial="hidden"
@@ -132,10 +132,10 @@ export default function BlogPage() {
                     >
                         {blogPosts.slice(1).map((post) => (
                             <motion.div key={post.id} variants={fadeInUp}>
-                                <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-200)] bg-white group">
+                                <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-100)] bg-white group">
                                     <CardHeader>
                                         <div className="flex items-center justify-between mb-4">
-                                            <span className="bg-[var(--greyscale-100)] text-[var(--greyscale-700)] px-3 py-1 rounded-full text-sm font-medium">
+                                            <span className="bg-[var(--greyscale-50)] text-[var(--greyscale-700)] px-3 py-1 rounded-full text-sm font-medium">
                                                 {post.category}
                                             </span>
                                             <div className="flex items-center gap-3 text-[var(--greyscale-400)] text-xs">
@@ -164,14 +164,14 @@ export default function BlogPage() {
             </section>
 
             {/* Newsletter CTA */}
-            <section className="py-16 px-4">
+            <section className="py-16 px-4 bg-[var(--greyscale-50)]">
                 <div className="container mx-auto max-w-3xl">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
-                        className="bg-gradient-to-r from-[var(--primary-100)] to-[var(--primary-50)] rounded-3xl p-8 md:p-12 text-center"
+                        className="bg-gradient-to-r from-[var(--primary-50)] to-transparent rounded-3xl p-8 md:p-12 text-center"
                     >
                         <h3 className="text-3xl font-bold mb-4">
                             Đăng Ký Nhận Kiến Thức Mới
