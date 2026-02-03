@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, Variants } from "framer-motion";
@@ -88,7 +87,7 @@ export default function BlogPage() {
                         viewport={{ once: true, margin: "-100px" }}
                         variants={fadeInUp}
                     >
-                        <Link href={`/resources/blog/${blogPosts[0].slug}`}>
+                        <a href={`/resources/blog/${blogPosts[0].slug}`}>
                             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)] group cursor-pointer">
                                 <div className="bg-[var(--primary-50)] p-8">
                                     <div className="flex items-center gap-2 mb-4">
@@ -117,7 +116,7 @@ export default function BlogPage() {
                                     </div>
                                 </div>
                             </Card>
-                        </Link>
+                        </a>
                     </motion.div>
                 </div>
             </section>
@@ -134,36 +133,36 @@ export default function BlogPage() {
                     >
                         {blogPosts.slice(1).map((post) => (
                             <motion.div key={post.id} variants={fadeInUp}>
-                                <Link href={`/resources/blog/${post.slug}`}>
+                                <a href={`/resources/blog/${post.slug}`}>
                                     <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-100)] bg-[var(--greyscale-0)] group">
-                                    <CardHeader>
-                                        <div className="flex items-center justify-between mb-4">
-                                            <span className="bg-[var(--palette-blue-badge-bg)] text-[var(--palette-blue-text)] px-3 py-1 rounded-full text-sm font-medium">
-                                                {post.category}
-                                            </span>
-                                            <div className="flex items-center gap-3 text-[var(--greyscale-400)] text-xs">
-                                                <span>{post.publishDate}</span>
-                                                <span>•</span>
-                                                <span>{post.readTime}</span>
+                                        <CardHeader>
+                                            <div className="flex items-center justify-between mb-4">
+                                                <span className="bg-[var(--palette-blue-badge-bg)] text-[var(--palette-blue-text)] px-3 py-1 rounded-full text-sm font-medium">
+                                                    {post.category}
+                                                </span>
+                                                <div className="flex items-center gap-3 text-[var(--greyscale-400)] text-xs">
+                                                    <span>{post.publishDate}</span>
+                                                    <span>•</span>
+                                                    <span>{post.readTime}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <CardTitle className="text-xl font-bold mb-3 group-hover:text-[var(--base-primary)] transition-colors line-clamp-2">
-                                            {post.title}
-                                        </CardTitle>
-                                        <CardDescription className="text-[var(--base-text-paragraph)] leading-relaxed line-clamp-3">
-                                            {post.excerpt}
-                                        </CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="flex items-center gap-2 text-[var(--base-primary)] font-semibold">
-                                            Đọc thêm
-                                            <ArrowRight className="h-4 w-4" />
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </Link>
-                        </motion.div>
-                    ))}
+                                            <CardTitle className="text-xl font-bold mb-3 group-hover:text-[var(--base-primary)] transition-colors line-clamp-2">
+                                                {post.title}
+                                            </CardTitle>
+                                            <CardDescription className="text-[var(--base-text-paragraph)] leading-relaxed line-clamp-3">
+                                                {post.excerpt}
+                                            </CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <div className="flex items-center gap-2 text-[var(--base-primary)] font-semibold">
+                                                Đọc thêm
+                                                <ArrowRight className="h-4 w-4" />
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                </a>
+                            </motion.div>
+                        ))}
                     </motion.div>
                 </div>
             </section>
