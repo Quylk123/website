@@ -45,9 +45,6 @@ export default function Footer() {
                             Liên Hệ Hỗ Trợ
                         </h4>
                         <ul className="space-y-4">
-                            <li className="flex items-center hover:text-[var(--base-primary)] transition">
-                                <User className="mr-3 w-5 h-5" /> Nguyễn Minh Thắng
-                            </li>
                             <li>
                                 <a
                                     href="tel:0899111195"
