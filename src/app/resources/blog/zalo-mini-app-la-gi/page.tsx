@@ -8,7 +8,7 @@ export const metadata: Metadata = {
         title: "Zalo Mini App là gì? Tại sao doanh nghiệp SME cần ngay? | Zimo",
         description: "Tìm hiểu về Zalo Mini App - giải pháp giúp doanh nghiệp SME tăng trưởng 200% với chi phí chỉ bằng 10% làm app truyền thống.",
         type: "article",
-        url: "https://zimo.vn/resources/blog/zalominiapp-la-gi-tai-sao-can-doi-voi-doanh-nghiep-sme",
+        url: "https://zimo.vn/resources/blog/zalo-mini-app-la-gi",
     },
 };
 
