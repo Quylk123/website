@@ -5,36 +5,36 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, Variants } from "framer-motion";
 
-// Blog posts data
+// Blog posts data with updated slugs
 const blogPosts = [
     {
         id: 1,
-        slug: "zalominiapp-la-gi-tai-sao-can-doi-voi-doanh-nghiep-sme",
+        slug: "zalo-mini-app-la-gi",
         title: "Zalo Mini App là gì? Tại sao doanh nghiệp SME cần ngay?",
         excerpt: "Khám phá sức mạnh của Zalo Mini App - công cụ giúp doanh nghiệp SME tăng trưởng 200% trong 3 tháng với chi phí tối ưu.",
         category: "Chuyển đổi số",
-        readTime: "5 phút",
+        readTime: "8 phút",
         publishDate: "03/02/2026",
         featured: true,
     },
     {
         id: 2,
-        slug: "5-loi-sai-khi-xay-dung-zalominiapp-cho-khach-san",
+        slug: "5-loi-sai-khi-xay-dung-zalo-mini-app-cho-khach-san",
         title: "5 Lỗi Sai Khi Xây Dựng Zalo Mini App Cho Khách Sạn",
         excerpt: "Tránh những sai lầm tốn kém khi triển khai Zalo Mini App cho khách sạn. Học từ kinh nghiệm thực tế của 50+ khách hàng.",
         category: "Khách sạn",
         readTime: "7 phút",
-        publishDate: "01/02/2026",
+        publishDate: "03/02/2026",
         featured: false,
     },
     {
         id: 3,
-        slug: "tang-doan-hang-ban-qua-zalo-voi-crm-tich-diem",
-        title: "Tăng Đơn Hàng Bán Qua Zalo Với CRM Tích Điểm",
+        slug: "tang-don-hang-ban-qua-zalo-voi-crm-loyalty-tich-diem",
+        title: "Tăng Đơn Hàng Bán Qua Zalo Với CRM & Loyalty Tích Điểm",
         excerpt: "Chiến thuật CRM & Loyalty giúp tăng tỷ lệ đơn hàng lặp lên 40%. Đi kèm case study thực tế.",
         category: "Marketing",
         readTime: "6 phút",
-        publishDate: "28/01/2026",
+        publishDate: "03/02/2026",
         featured: false,
     },
 ];
@@ -88,34 +88,36 @@ export default function BlogPage() {
                         viewport={{ once: true, margin: "-100px" }}
                         variants={fadeInUp}
                     >
-                        <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)]">
-                            <div className="bg-[var(--primary-50)] p-8">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <span className="bg-[var(--base-primary)] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                        Nổi bật
-                                    </span>
-                                    <span className="text-[var(--base-primary)] text-sm font-medium">
-                                        {blogPosts[0].category}
-                                    </span>
-                                </div>
-                                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-[var(--greyscale-900)]">
-                                    {blogPosts[0].title}
-                                </h2>
-                                <p className="text-lg text-[var(--base-text-paragraph)] mb-6 leading-relaxed">
-                                    {blogPosts[0].excerpt}
-                                </p>
-                                <div className="flex items-center gap-6 text-[var(--greyscale-400)]">
-                                    <div className="flex items-center gap-2">
-                                        <Calendar className="h-4 w-4" />
-                                        <span className="text-sm">{blogPosts[0].publishDate}</span>
+                        <Link href={`/resources/blog/${blogPosts[0].slug}`}>
+                            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-[var(--base-primary)] group cursor-pointer">
+                                <div className="bg-[var(--primary-50)] p-8">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <span className="bg-[var(--base-primary)] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                            Nổi bật
+                                        </span>
+                                        <span className="text-[var(--base-primary)] text-sm font-medium">
+                                            {blogPosts[0].category}
+                                        </span>
                                     </div>
-                                    <div className="flex items-center gap-2">
-                                        <Clock className="h-4 w-4" />
-                                        <span className="text-sm">{blogPosts[0].readTime}</span>
+                                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 group-hover:text-[var(--base-primary)] transition-colors">
+                                        {blogPosts[0].title}
+                                    </h2>
+                                    <p className="text-lg text-[var(--base-text-paragraph)] mb-6 leading-relaxed">
+                                        {blogPosts[0].excerpt}
+                                    </p>
+                                    <div className="flex items-center gap-6 text-[var(--greyscale-500)]">
+                                        <div className="flex items-center gap-2">
+                                            <Calendar className="h-4 w-4" />
+                                            <span className="text-sm">{blogPosts[0].publishDate}</span>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <Clock className="h-4 w-4" />
+                                            <span className="text-sm">{blogPosts[0].readTime}</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </Card>
+                            </Card>
+                        </Link>
                     </motion.div>
                 </div>
             </section>
@@ -132,7 +134,8 @@ export default function BlogPage() {
                     >
                         {blogPosts.slice(1).map((post) => (
                             <motion.div key={post.id} variants={fadeInUp}>
-                                <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-100)] bg-[var(--greyscale-0)] group">
+                                <Link href={`/resources/blog/${post.slug}`}>
+                                    <Card className="h-full hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-[var(--greyscale-100)] bg-[var(--greyscale-0)] group">
                                     <CardHeader>
                                         <div className="flex items-center justify-between mb-4">
                                             <span className="bg-[var(--palette-blue-badge-bg)] text-[var(--palette-blue-text)] px-3 py-1 rounded-full text-sm font-medium">
@@ -152,13 +155,15 @@ export default function BlogPage() {
                                         </CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <div className="flex items-center gap-2 text-[var(--greyscale-400)] font-semibold">
-                                            <span className="text-[var(--base-primary)]">Sắp cập nhật...</span>
+                                        <div className="flex items-center gap-2 text-[var(--base-primary)] font-semibold">
+                                            Đọc thêm
+                                            <ArrowRight className="h-4 w-4" />
                                         </div>
                                     </CardContent>
                                 </Card>
-                            </motion.div>
-                        ))}
+                            </Link>
+                        </motion.div>
+                    ))}
                     </motion.div>
                 </div>
             </section>
