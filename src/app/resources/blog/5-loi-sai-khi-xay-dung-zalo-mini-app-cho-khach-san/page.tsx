@@ -5,17 +5,54 @@ export const metadata: Metadata = {
     title: "5 Lỗi Sai Khi Xây Dựng Zalo Mini App Cho Khách Sạn | Zimo",
     description: "Tránh 5 sai lầm tốn kém khi triển khai Zalo Mini App cho khách sạn. Học từ kinh nghiệm thực tế của 50+ khách hàng để tối ưu ROI.",
     keywords: "Zalo Mini App khách sạn, lỗi xây dựng app khách sạn, booking app khách sạn, Zalo booking",
+    alternates: {
+        canonical: "https://zimo.vn/resources/blog/5-loi-sai-khi-xay-dung-zalo-mini-app-cho-khach-san",
+    },
     openGraph: {
         title: "5 Lỗi Sai Khi Xây Dựng Zalo Mini App Cho Khách Sạn | Zimo",
         description: "Học từ kinh nghiệm 50+ khách sạn - tránh sai lầm tốn kém khi triển khai Zalo Mini App booking.",
         type: "article",
-        url: "https://zimo.vn/resources/blog/5-loi-sai-khi-xay-dung-zalominiapp-cho-khach-san",
+        url: "https://zimo.vn/resources/blog/5-loi-sai-khi-xay-dung-zalo-mini-app-cho-khach-san",
     },
 };
 
 export default function BlogPostPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "5 Lỗi Sai Khi Xây Dựng Zalo Mini App Cho Khách Sạn",
+        "description": "Tránh 5 sai lầm tốn kém khi triển khai Zalo Mini App cho khách sạn. Học từ kinh nghiệm thực tế của 50+ khách hàng để tối ưu ROI.",
+        "image": "https://zimo.vn/images/blog/hotel-booking-app.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "Zimo"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Zimo",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://zimo.vn/logo.png"
+            }
+        },
+        "datePublished": "2026-02-03",
+        "dateModified": "2026-02-03",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://zimo.vn/resources/blog/5-loi-sai-khi-xay-dung-zalo-mini-app-cho-khach-san"
+        },
+        "keywords": "Zalo Mini App khách sạn, lỗi xây dựng app khách sạn, booking app khách sạn, Zalo booking",
+        "articleSection": "Khách sạn",
+        "wordCount": 1800
+    };
+
     return (
-        <article className="flex flex-col bg-[var(--base-background)] text-[var(--greyscale-900)] font-sans min-h-screen">
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <article className="flex flex-col bg-[var(--base-background)] text-[var(--greyscale-900)] font-sans min-h-screen">
             {/* Header */}
             <header className="pt-20 pb-12 bg-[var(--greyscale-50)]">
                 <div className="container mx-auto px-4 max-w-4xl">
@@ -318,5 +355,6 @@ export default function BlogPostPage() {
                 </div>
             </div>
         </article>
+        </>
     );
 }

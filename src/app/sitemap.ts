@@ -59,6 +59,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.7,
         },
         {
+            url: `${baseUrl}/resources/blog/zalo-mini-app-la-gi`,
+            lastModified: new Date('2026-02-03'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/resources/blog/5-loi-sai-khi-xay-dung-zalo-mini-app-cho-khach-san`,
+            lastModified: new Date('2026-02-03'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/resources/blog/tang-don-hang-ban-qua-zalo-voi-crm-loyalty-tich-diem`,
+            lastModified: new Date('2026-02-03'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/resources/help-center`,
             lastModified: new Date(),
             changeFrequency: 'weekly',

@@ -4,6 +4,9 @@ export const metadata: Metadata = {
     title: "Tăng Đơn Hàng Bán Qua Zalo Với CRM & Loyalty Tích Điểm | Zimo",
     description: "Chiến thuật CRM & Loyalty giúp tăng tỷ lệ đơn hàng lặp lên 40%. Đi kèm case study thực tế từ 30+ doanh nghiệp thương mại.",
     keywords: "CRM Zalo, Loyalty Zalo Mini App, tích điểm bán hàng, tăng đơn hàng Zalo",
+    alternates: {
+        canonical: "https://zimo.vn/resources/blog/tang-don-hang-ban-qua-zalo-voi-crm-loyalty-tich-diem",
+    },
     openGraph: {
         title: "Tăng Đơn Hàng Bán Qua Zalo Với CRM & Loyalty Tích Điểm | Zimo",
         description: "Học cách tăng 40% tỷ lệ đơn hàng lặp với CRM & Loyalty tích hợp Zalo. Case study từ 30+ doanh nghiệp.",
@@ -13,8 +16,42 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPostPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Tăng Đơn Hàng Bán Qua Zalo Với CRM & Loyalty Tích Điểm",
+        "description": "Chiến thuật CRM & Loyalty giúp tăng tỷ lệ đơn hàng lặp lên 40%. Đi kèm case study thực tế từ 30+ doanh nghiệp thương mại.",
+        "image": "https://zimo.vn/images/blog/crm-loyalty-zalo.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "Zimo"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Zimo",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://zimo.vn/logo.png"
+            }
+        },
+        "datePublished": "2026-02-03",
+        "dateModified": "2026-02-03",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://zimo.vn/resources/blog/tang-don-hang-ban-qua-zalo-voi-crm-loyalty-tich-diem"
+        },
+        "keywords": "CRM Zalo, Loyalty Zalo Mini App, tích điểm bán hàng, tăng đơn hàng Zalo",
+        "articleSection": "Marketing",
+        "wordCount": 1600
+    };
+
     return (
-        <article className="flex flex-col bg-[var(--base-background)] text-[var(--greyscale-900)] font-sans min-h-screen">
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <article className="flex flex-col bg-[var(--base-background)] text-[var(--greyscale-900)] font-sans min-h-screen">
             {/* Header */}
             <header className="pt-20 pb-12 bg-[var(--greyscale-50)]">
                 <div className="container mx-auto px-4 max-w-4xl">
@@ -230,5 +267,6 @@ export default function BlogPostPage() {
                 </div>
             </div>
         </article>
+        </>
     );
 }

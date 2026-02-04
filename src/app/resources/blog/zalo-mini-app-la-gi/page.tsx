@@ -4,6 +4,9 @@ export const metadata: Metadata = {
     title: "Zalo Mini App là gì? Lợi ích và Tại sao Doanh nghiệp SME Cần Ngay | Zimo",
     description: "Zalo Mini App là ứng dụng nhỏ tích hợp ngay trên Zalo - giúp doanh nghiệp SME giảm 90% chi phí phát triển app, tiếp cận 76 triệu người dùng Việt Nam.",
     keywords: "Zalo Mini App là gì, Zalo Mini App doanh nghiệp SME, phát triển Zalo Mini App, app Zalo cho doanh nghiệp",
+    alternates: {
+        canonical: "https://zimo.vn/resources/blog/zalo-mini-app-la-gi",
+    },
     openGraph: {
         title: "Zalo Mini App là gì? Tại sao doanh nghiệp SME cần ngay? | Zimo",
         description: "Tìm hiểu về Zalo Mini App - giải pháp giúp doanh nghiệp SME tăng trưởng 200% với chi phí chỉ bằng 10% làm app truyền thống.",
@@ -13,8 +16,42 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPostPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Zalo Mini App là gì? Tại sao Doanh nghiệp SME Cần Ngay?",
+        "description": "Zalo Mini App là ứng dụng nhỏ tích hợp ngay trên Zalo - giúp doanh nghiệp SME giảm 90% chi phí phát triển app, tiếp cận 76 triệu người dùng Việt Nam.",
+        "image": "https://zimo.vn/images/blog/zalo-mini-app.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "Zimo"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Zimo",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://zimo.vn/logo.png"
+            }
+        },
+        "datePublished": "2026-02-03",
+        "dateModified": "2026-02-03",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://zimo.vn/resources/blog/zalo-mini-app-la-gi"
+        },
+        "keywords": "Zalo Mini App là gì, Zalo Mini App doanh nghiệp SME, phát triển Zalo Mini App, app Zalo cho doanh nghiệp",
+        "articleSection": "Chuyển đổi số",
+        "wordCount": 1500
+    };
+
     return (
-        <article className="flex flex-col bg-[var(--base-background)] text-[var(--greyscale-900)] font-sans min-h-screen">
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <article className="flex flex-col bg-[var(--base-background)] text-[var(--greyscale-900)] font-sans min-h-screen">
             {/* Header */}
             <header className="pt-20 pb-12 bg-[var(--greyscale-50)]">
                 <div className="container mx-auto px-4 max-w-4xl">
@@ -198,5 +235,6 @@ export default function BlogPostPage() {
                 </div>
             </div>
         </article>
+        </>
     );
 }
