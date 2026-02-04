@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import ClientPage from "./ClientPage";
 
 export const metadata: Metadata = {
-    title: "Zimo Hotel - Hệ thống quản lý khách sạn & lưu trú toàn diện",
-    description: "Giải pháp quản lý khách sạn 4.0 toàn diện: Booking, Housekeeping, Minibar & Báo cáo. Tích hợp Zalo Mini App giúp tối ưu trải nghiệm khách hàng và tăng doanh thu.",
-    keywords: ["phần mềm quản lý khách sạn", "pms hotel", "quản lý nhà nghỉ", "zalo mini app khách sạn", "booking engine", "hotel management system"],
+    title: "Zimo Hotel - Giải pháp Mini App Khách Sạn chuyên nghiệp trên Zalo & Facebook",
+    description: "Mini App Khách Sạn toàn diện từ Zimo: Booking tự động, quản lý phòng, tích điểm khách hàng. Tích hợp Zalo OA giúp tăng 200% tỷ lệ đặt phòng.",
+    keywords: ["mini app khách sạn", "zalo mini app khách sạn", "phần mềm quản lý khách sạn", "pms hotel", "quản lý nhà nghỉ", "booking engine", "hotel management system"],
+    alternates: {
+        canonical: "https://zimo.vn/products/zimo-hotel",
+    },
     openGraph: {
-        title: "Zimo Hotel - Nền tảng quản lý khách sạn & lưu trú toàn diện",
-        description: "Giải pháp quản lý khách sạn 4.0 toàn diện: Booking, Housekeeping, Minibar & Báo cáo. Tích hợp Zalo Mini App giúp tối ưu trải nghiệm khách hàng và tăng doanh thu.",
+        title: "Zimo Hotel - Giải pháp Mini App Khách Sạn chuyên nghiệp",
+        description: "Mini App Khách Sạn toàn diện: Booking tự động, quản lý phòng, tích điểm. Tích hợp Zalo OA giúp tăng 200% tỷ lệ đặt phòng.",
         url: "https://zimo.vn/products/zimo-hotel",
         type: "website",
         images: [{
@@ -18,5 +21,46 @@ export const metadata: Metadata = {
 };
 
 export default function ZimoHotelPage() {
-    return <ClientPage />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Zimo Hotel - Mini App Khách Sạn",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Zalo, Facebook",
+        "description": "Giải pháp Mini App Khách Sạn toàn diện: Booking tự động, quản lý phòng, tích điểm khách hàng. Tích hợp Zalo OA giúp tăng 200% tỷ lệ đặt phòng.",
+        "offers": {
+            "@type": "Offer",
+            "price": "Liên hệ",
+            "priceCurrency": "VND"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "50"
+        },
+        "featureList": [
+            "Booking tự động qua Zalo",
+            "Sơ đồ phòng trực quan",
+            "Hệ thống tích điểm Loyalty",
+            "Gửi tin ZNS tự động",
+            "Tích hợp PMS/POS",
+            "Báo cáo thống kê chi tiết"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Zimo",
+            "url": "https://zimo.vn"
+        },
+        "url": "https://zimo.vn/products/zimo-hotel"
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <ClientPage />
+        </>
+    );
 }

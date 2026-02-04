@@ -311,7 +311,7 @@ export default function ClientPage() {
                         className="text-center mb-16 max-w-3xl mx-auto"
                     >
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--greyscale-900)] tracking-tight">
-                            Mọi tính năng bạn cần. <br />
+                            Mọi tính năng <span className="text-[var(--base-primary)]">Mini App Khách Sạn</span> bạn cần. <br />
                             <span className="text-[var(--greyscale-400)]">Không có sự phức tạp.</span>
                         </h2>
                     </motion.div>
@@ -410,10 +410,10 @@ export default function ClientPage() {
                                 <Badge icon={Smartphone} color="purple">Zalo Mini App</Badge>
                             </div>
                             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[var(--greyscale-900)] tracking-tight">
-                                Trải nghiệm hoàn hảo <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
-                                    ngay trên di động
-                                </span>
+                                    Mini App Khách Sạn
+                                </span>: Trải nghiệm hoàn hảo <br />
+                                ngay trên di động
                             </h2>
                             <p className="text-lg text-[var(--greyscale-500)]">
                                 Không cần cài đặt. Khách hàng và Nhân viên có thể truy cập đặt phòng, gọi dịch vụ, xem lịch sử ngay trên Zalo.

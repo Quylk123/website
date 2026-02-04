@@ -77,6 +77,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/resources/blog/cach-trien-khai-mini-app-khach-san-hieu-qua`,
+            lastModified: new Date('2026-02-04'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/resources/blog/so-sanh-web-truyen-thong-vs-mini-app-khach-san`,
+            lastModified: new Date('2026-02-04'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/resources/help-center`,
             lastModified: new Date(),
             changeFrequency: 'weekly',

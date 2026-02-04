@@ -36,6 +36,26 @@ const blogPosts = [
         publishDate: "03/02/2026",
         featured: false,
     },
+    {
+        id: 4,
+        slug: "cach-trien-khai-mini-app-khach-san-hieu-qua",
+        title: "Cách Triển Khai Mini App Khách Sạn Hiệu Quả - Hướng Dẫn Chi Tiết",
+        excerpt: "Hướng dẫn triển khai Mini App Khách Sạn từ A-Z: Đăng ký Zalo OA, thiết kế, tích hợp PMS. Tăng 200% tỷ lệ đặt phòng.",
+        category: "Hướng dẫn",
+        readTime: "10 phút",
+        publishDate: "04/02/2026",
+        featured: false,
+    },
+    {
+        id: 5,
+        slug: "so-sanh-web-truyen-thong-vs-mini-app-khach-san",
+        title: "So Sánh Web Truyền Thống vs Mini App Khách Sạn - Cái Nào Tốt Hơn?",
+        excerpt: "So sánh chi tiết Web truyền thống và Mini App Khách Sạn: Tính năng, chi phí, trải nghiệm. Tại sao Mini App đang thắng thế.",
+        category: "So sánh",
+        readTime: "11 phút",
+        publishDate: "04/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations
