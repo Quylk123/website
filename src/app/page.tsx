@@ -339,7 +339,7 @@ export default function Home() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[var(--greyscale-200)]">
               <img
-                src="https://rbawlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/website/img/DashboardLightmode.png"
+                src="https://rblawnlhkgwmdbstkhxp.supabase.co/storage/v1/object/public/PublicImage/websiteimg/DashboardLightmode.png"
                 alt="Analytics Dashboard"
                 className="w-full transform hover:scale-105 transition duration-700"
               />
