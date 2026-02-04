@@ -67,14 +67,23 @@ export default function Home() {
               Giải pháp toàn diện giúp doanh nghiệp SME xây dựng Zalo Mini App, Website bán hàng và quản lý vận hành trong 1 nền tảng.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 justify-center mb-10">
-              <a href="https://zalo.me/0899111195" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[var(--base-primary)] text-white px-8 py-4 rounded-full font-bold hover:shadow-xl hover:-translate-y-1 transition-all">
-                <Zap className="w-5 h-5" />
+              <Button
+                variant="primary"
+                className="shadow-md shadow-[var(--primary-200)]"
+                href="https://zalo.me/0899111195"
+                target="_blank"
+                leftIcon={<Zap className="w-5 h-5" />}
+              >
                 Tư vấn qua Zalo
-              </a>
-              <Link href="/products/zimo-hotel" className="inline-flex items-center gap-2 bg-transparent text-[var(--greyscale-900)] border-2 border-[var(--greyscale-300)] px-8 py-4 rounded-full font-bold hover:border-[var(--base-primary)] hover:text-[var(--base-primary)] transition-all">
+              </Button>
+              <Button
+                variant="outline"
+                className="border-[var(--greyscale-300)] hover:border-[var(--base-primary)]"
+                href="/products/zimo-hotel"
+                rightIcon={<ArrowRight className="w-5 h-5" />}
+              >
                 Xem Zimo Hotel
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              </Button>
             </motion.div>
           </motion.div>
         </div>
@@ -534,13 +543,22 @@ export default function Home() {
               Hãy bắt đầu ngay hôm nay để tăng doanh thu và tối ưu quy trình vận hành của doanh nghiệp bạn.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="https://zalo.me/0899111195" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-[var(--base-primary)] px-8 py-4 rounded-full font-bold hover:shadow-xl hover:-translate-y-1 transition-all">
-                <Zap className="w-5 h-5" />
+              <Button
+                variant="primary"
+                className="bg-white text-[var(--base-primary)] hover:bg-white/90 shadow-md"
+                href="https://zalo.me/0899111195"
+                target="_blank"
+                leftIcon={<Zap className="w-5 h-5" />}
+              >
                 Tư vấn qua Zalo
-              </a>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--base-primary)]">
+              </Button>
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-[var(--base-primary)]"
+                href="/products"
+                rightIcon={<ArrowRight className="w-5 h-5" />}
+              >
                 Xem giải pháp chi tiết
-                <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
           </motion.div>
