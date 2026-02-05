@@ -20,6 +20,12 @@ const customers: Customer[] = [
         link: "https://zalo.me/s/2989613852543518022/",
         category: "Mini App"
     },
+    {
+        name: "Hotel TAP",
+        logo: "https://photo-logo-mapps.zadn.vn/b58bbb6b1c2ef570ac3f.jpg",
+        link: "https://zalo.me/s/2301532726399393201/",
+        category: "Hotel"
+    },
 ];
 
 export default function ShowcasePage() {
