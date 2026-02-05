@@ -116,7 +116,7 @@ export default function Footer() {
                     <p>
                         Phát triển bởi{" "}
                         <span className="text-[var(--base-primary)] font-semibold">
-                            MiniAI 2K Team
+                            Zimo Team
                         </span>
                     </p>
                 </div>
