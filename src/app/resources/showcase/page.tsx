@@ -15,7 +15,7 @@ interface Customer {
 
 const customers: Customer[] = [
     {
-        name: "Khách Hàng Thân Thiết",
+        name: "Hoi An Old Town Table",
         logo: "https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/611961366_122100944403200485_2579998591705457452_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Wjhr6AwfN-EQ7kNvwHNLm1x&_nc_oc=AdnSxItWGT5BBaz1SfODBVVjxv2u_JQjTR17fRsJs-rrJEd3hdD5tezZg7TWpE4EuRI&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=Yx6IJXCr31eFhv22CLwt7A&oh=00_AfusjbN7NxJ9M7sFliyZOcot-arWVHHWG1EawUHOyaqHPA&oe=698A00A1",
         link: "https://zalo.me/s/2989613852543518022/",
         category: "Mini App"
