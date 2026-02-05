@@ -28,8 +28,10 @@ export default function PricingPage() {
                             <p className="text-[var(--greyscale-500)] mb-8 h-12">Dành cho cá nhân hoặc cửa hàng nhỏ mới bắt đầu kinh doanh online.</p>
 
                             <div className="flex-1 space-y-4 mb-8">
-                                <FeatureItem text="Website bán hàng cơ bản" />
+                                <FeatureItem text="Mini App bán hàng cơ bản" />
                                 <FeatureItem text="Zalo Mini App (Template)" />
+                                <FeatureItem text="Thông tin khách hàng đơn giản" />
+                                <FeatureItem text="Trạng thái đơn hàng" />
                                 <FeatureItem text="Quản lý 500 sản phẩm" />
                                 <FeatureItem text="1 Tài khoản nhân viên" />
                                 <FeatureItem text="Nhắn tin ZNS cơ bản" />
