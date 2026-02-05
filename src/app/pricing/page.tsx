@@ -29,7 +29,7 @@ export default function PricingPage() {
 
                             <div className="flex-1 space-y-4 mb-8">
                                 <FeatureItem text="Mini App bán hàng cơ bản" />
-                                <FeatureItem text="Zalo Mini App (Template)" />
+                                <FeatureItem text="Giao diện Mini App linh hoạt" />
                                 <FeatureItem text="Thông tin khách hàng đơn giản" />
                                 <FeatureItem text="Trạng thái đơn hàng" />
                                 <FeatureItem text="Quản lý 500 sản phẩm" />
