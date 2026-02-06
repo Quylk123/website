@@ -270,7 +270,7 @@ export default function Home() {
             </motion.h2>
             <div className="space-y-8">
               <motion.div variants={fadeInUp} className="flex gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-white border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                <div className="w-14 h-14 rounded-2xl bg-[var(--greyscale-0)] border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
                   <Zap className="text-[var(--base-primary)] h-7 w-7" />
                 </div>
                 <div>
@@ -279,7 +279,7 @@ export default function Home() {
                 </div>
               </motion.div>
               <motion.div variants={fadeInUp} className="flex gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-white border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                <div className="w-14 h-14 rounded-2xl bg-[var(--greyscale-0)] border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
                   <MessageCircle className="text-[var(--base-primary)] h-7 w-7" />
                 </div>
                 <div>
@@ -288,7 +288,7 @@ export default function Home() {
                 </div>
               </motion.div>
               <motion.div variants={fadeInUp} className="flex gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-white border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                <div className="w-14 h-14 rounded-2xl bg-[var(--greyscale-0)] border border-[var(--primary-200)] shadow-md flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
                   <Coins className="text-[var(--base-primary)] h-7 w-7" />
                 </div>
                 <div>

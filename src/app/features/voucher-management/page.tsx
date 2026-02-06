@@ -47,7 +47,7 @@ export default function VoucherPage() {
                                 {/* Back decorator */}
                                 <div className="absolute top-4 -right-4 w-full h-full bg-red-200 rounded-3xl transform rotate-6 opacity-50"></div>
                                 {/* Main Coupon */}
-                                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                                <div className="relative bg-[var(--greyscale-0)] rounded-3xl shadow-2xl overflow-hidden border border-[var(--greyscale-100)]">
                                     <div className="bg-red-600 p-6 flex items-center justify-between text-white">
                                         <div>
                                             <div className="text-sm font-medium opacity-90">SUMMER SALE</div>

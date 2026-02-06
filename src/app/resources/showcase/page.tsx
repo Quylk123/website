@@ -50,7 +50,7 @@ export default function ShowcasePage() {
                             href={customer.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-[var(--greyscale-100)] hover:border-[var(--primary-100)]"
+                            className="group relative bg-[var(--greyscale-0)] rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-[var(--greyscale-100)] hover:border-[var(--primary-100)]"
                         >
                             {/* Category Badge */}
                             {customer.category && (
