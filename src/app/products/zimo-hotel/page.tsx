@@ -6,14 +6,24 @@ import Button from "@/components/Button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-    title: "Zimo Hotel - Phần Mềm Quản Lý Khách Sạn & Booking Engine",
-    description: "Giải pháp quản lý khách sạn, homestay, căn hộ dịch vụ. Booking Engine tích hợp trực tiếp trên Zalo Mini App, không mất phí hoa hồng OTA.",
-    keywords: ["phần mềm quản lý khách sạn", "booking engine", "đặt phòng trên zalo", "quản lý homestay", "pms cho khách sạn nhỏ"],
+    title: "Zimo Hotel - Phần Mềm Quản Lý Khách Sạn & Booking Miễn Phí",
+    description: "Zimo Hotel là nền tảng quản lý khách sạn toàn diện: Booking, Housekeeping, Minibar & Báo cáo. Tích hợp Zalo Mini App, trải nghiệm di động hoàn hảo. Dùng thử miễn phí!",
+    keywords: ["phần mềm quản lý khách sạn", "hotel management system", "hotel booking software", "phần mềm đặt phòng khách sạn", "hotel booking engine", "giải pháp quản lý khách sạn", "quản lý khách sạn miễn phí", "phần mềm khách sạn mini", "homestay booking system", "quản lý nhà nghỉ bằng app", "phần mềm quản lý khách sạn trên zalo", "booking app khách sạn miễn phí"],
     openGraph: {
-        title: "Zimo Hotel - Booking Engine & PMS 4.0",
-        description: "Tăng 40% doanh thu đặt phòng trực tiếp, cắt giảm chi phí OTA với Booking Engine trên Zalo.",
+        title: "Zimo Hotel - Booking Engine & PMS 4.0 cho Khách Sạn & Homestay",
+        description: "Tăng 40% doanh thu đặt phòng trực tiếp, giảm phụ thuộc OTA. Booking Engine 0% phí tích hợp Zalo Mini App - Trải nghiệm di động hoàn hảo.",
         url: "https://zimo.vn/products/zimo-hotel",
+        siteName: "Zimo.vn",
+        locale: "vi_VN",
         type: "website",
+        images: [
+            {
+                url: "https://zimo.vn/og-zimo-hotel.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Zimo Hotel - Quản lý khách sạn toàn diện",
+            },
+        ],
     },
 };
 

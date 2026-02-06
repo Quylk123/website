@@ -14,6 +14,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Zimo - Nền tảng Mini App và Quản lý Bán hàng đa kênh",
   description: "Giải pháp trọn gói tích hợp Website bán hàng, Zalo Mini App và quản lý vận hành cho doanh nghiệp bán lẻ & dịch vụ.",
+  keywords: ["zalo mini app", "phần mềm quản lý bán hàng", "hotel management system", "booking engine", "quản lý khách sạn", "tích điểm loyalty"],
   openGraph: {
     title: "Zimo Platform - Bán hàng & Booking trong tầm tay",
     description: "Tăng doanh thu với giải pháp Mini App và quản lý tập trung.",
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     siteName: "Zimo Solutions",
     locale: "vi_VN",
     type: "website",
+  },
+  verification: {
+    google: "your-google-search-console-verification-code", // TODO: Replace with actual verification code
   },
 };
 
@@ -31,6 +35,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={manrope.variable}>
+      <head>
+        {/* Google Analytics 4 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased font-sans flex flex-col min-h-screen">
         <Header />
         <main className="flex-1">
