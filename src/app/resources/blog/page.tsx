@@ -146,6 +146,16 @@ const blogPosts = [
         publishDate: "10/02/2026",
         featured: false,
     },
+    {
+        id: 15,
+        slug: "zalo-mini-app-cho-khach-san",
+        title: "Zalo Mini App cho khách sạn - Tăng 150% đặt phòng 2026",
+        excerpt: "Hướng dẫn triển khai Zalo Mini App cho khách sạn: đặt phòng, check-in online, dịch vụ phòng, thanh toán. Tăng 150% đặt phòng trong 3 tháng.",
+        category: "Case Study",
+        readTime: "16 phút",
+        publishDate: "10/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations
