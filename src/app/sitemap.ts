@@ -131,6 +131,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/resources/blog/toi-uu-zns-zalo-mini-app`,
+            lastModified: new Date('2026-02-10'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/resources/help-center`,
             lastModified: new Date(),
             changeFrequency: 'weekly',

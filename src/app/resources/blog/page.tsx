@@ -126,6 +126,16 @@ const blogPosts = [
         publishDate: "10/02/2026",
         featured: false,
     },
+    {
+        id: 13,
+        slug: "toi-uu-zns-zalo-mini-app",
+        title: "Tối ưu ZNS cho Zalo Mini App - Tăng 90% tỷ lệ mở 2026",
+        excerpt: "Hướng dẫn tối ưu ZNS (Zalo Notification Service) cho Zalo Mini App: cách gửi, tối ưu content, time sending, và tăng 90% tỷ lệ mở.",
+        category: "Marketing",
+        readTime: "14 phút",
+        publishDate: "10/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations
