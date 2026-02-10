@@ -136,6 +136,16 @@ const blogPosts = [
         publishDate: "10/02/2026",
         featured: false,
     },
+    {
+        id: 14,
+        slug: "zalo-mini-app-cho-nha-hang",
+        title: "Zalo Mini App cho nhà hàng - Tăng 200% đơn hàng 2026",
+        excerpt: "Hướng dẫn triển khai Zalo Mini App cho nhà hàng: đặt bàn, menu online, thanh toán, tích điểm. Tăng 200% đơn hàng trong 3 tháng.",
+        category: "Case Study",
+        readTime: "15 phút",
+        publishDate: "10/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations
