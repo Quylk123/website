@@ -156,6 +156,16 @@ const blogPosts = [
         publishDate: "10/02/2026",
         featured: false,
     },
+    {
+        id: 16,
+        slug: "so-sanh-zalo-mini-app-vs-website",
+        title: "So sánh Zalo Mini App vs Website - Cái nào tốt hơn 2026?",
+        excerpt: "So sánh chi tiết Zalo Mini App vs Website: tính năng, chi phí, trải nghiệm, conversion. Khi nào nên dùng Mini App, khi nào nên dùng Website.",
+        category: "So sánh",
+        readTime: "17 phút",
+        publishDate: "10/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations

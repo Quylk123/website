@@ -149,6 +149,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/resources/blog/so-sanh-zalo-mini-app-vs-website`,
+            lastModified: new Date('2026-02-10'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/resources/help-center`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
