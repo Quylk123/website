@@ -106,6 +106,16 @@ const blogPosts = [
         publishDate: "07/02/2026",
         featured: false,
     },
+    {
+        id: 11,
+        slug: "huong-dan-dang-ky-zalo-mini-app-a-z",
+        title: "Hướng dẫn đăng ký Zalo Mini App từ A-Z - Quy trình chi tiết 2026",
+        excerpt: "Hướng dẫn đăng ký Zalo Mini App từ A-Z: Điều kiện, thủ tục, giấy tờ và các bước đăng ký. Cách duyệt nhanh nhất trong 3-5 ngày làm việc.",
+        category: "Hướng dẫn",
+        readTime: "15 phút",
+        publishDate: "10/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations
