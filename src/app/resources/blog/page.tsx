@@ -166,6 +166,16 @@ const blogPosts = [
         publishDate: "10/02/2026",
         featured: false,
     },
+    {
+        id: 17,
+        slug: "tich-hop-zalopay-zalo-mini-app",
+        title: "Tích hợp ZaloPay vào Zalo Mini App - Hướng dẫn chi tiết 2026",
+        excerpt: "Hướng dẫn tích hợp ZaloPay vào Zalo Mini App: cách tích hợp, phí giao dịch, quy trình thanh toán, và tối ưu conversion. Tăng 50% tỷ lệ thanh toán.",
+        category: "Hướng dẫn",
+        readTime: "15 phút",
+        publishDate: "10/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations
