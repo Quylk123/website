@@ -116,6 +116,16 @@ const blogPosts = [
         publishDate: "10/02/2026",
         featured: false,
     },
+    {
+        id: 12,
+        slug: "tich-hop-qr-code-zalo-mini-app",
+        title: "Tích hợp QR Code vào Zalo Mini App - Hướng dẫn chi tiết 2026",
+        excerpt: "Hướng dẫn tích hợp QR Code vào Zalo Mini App: cách tạo, đặt QR Code, theo dõi quét, và tối ưu conversion. Tăng 40% traffic từ offline.",
+        category: "Hướng dẫn",
+        readTime: "12 phút",
+        publishDate: "10/02/2026",
+        featured: false,
+    },
 ];
 
 // Animations
