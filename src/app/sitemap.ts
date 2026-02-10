@@ -89,6 +89,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/resources/blog/lich-su-phat-trien-zalo-mini-app-2024-2026`,
+            lastModified: new Date('2026-02-07'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/resources/blog/so-sanh-zalo-mini-app-vs-zalo-oa`,
+            lastModified: new Date('2026-02-07'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/resources/blog/khi-nao-nen-dung-zalo-mini-app-checklist`,
+            lastModified: new Date('2026-02-07'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/resources/blog/tuong-lai-zalo-mini-app-2026-2030`,
+            lastModified: new Date('2026-02-07'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/resources/blog/tang-doanh-so-voi-zalo-mini-app-5-chien-luoc`,
+            lastModified: new Date('2026-02-07'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/resources/help-center`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
