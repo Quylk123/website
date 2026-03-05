@@ -1,0 +1,12 @@
+# robots.txt for zimo.vn
+
+User-agent: *
+Allow: /
+
+# Disallow specific paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /.well-known/
+
+# Sitemap
+Sitemap: https://zimo.vn/sitemap.xml
